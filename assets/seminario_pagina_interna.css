@@ -1,0 +1,84 @@
+:root {
+    --cor-fonte-preto: #000;
+    --cor-fundo-branco: #fff;
+    --cor-fundo-principal: #9FB96F;
+    --cor-fundo-secundario: #BFD990;
+}
+
+.conteudo {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ESCONDER ELEMENTOS MOODLE PÁGINAS INTERNAS*/
+#page-header .card-body,
+[role=main] h2,
+.modified {
+    display: none;
+}
+
+.ajuste_bottom {
+    margin-bottom: 3rem;
+}
+
+.mensagem_capa a {
+    color: #F0AD48;
+}
+
+.mensagem_capa a:hover {
+    color: #F2CB91;
+}
+
+/* CONTEÚDO */
+.container{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* MENU LATERAL */
+.lateral{
+    font-size: 1.2rem;
+    background-color: #9FB96F;
+    padding: 1rem;
+    text-align: left;
+    color: var(--cor-fonte-preto);
+}
+
+.lateral a{
+    color: var(--cor-fonte-preto);
+}
+
+.icone_menu{
+    width: 8%;
+    margin-right: 0.5rem;
+}
+
+.inicio {
+    background-color: var(--cor-fundo-secundario);
+}
+
+/* PÁGINA INICIAL */
+#conteudo_inicio{
+    background-color: var(--cor-fundo-secundario);
+    padding: 2rem;
+    font-size: 1.25rem;
+}
+
+.titulo_inicio{
+    line-height: 1;
+}
+
+.titulo_destaque{
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.texto_destaque{
+    font-weight: 800;
+}
+
+.ativo{
+    background-color: var(--cor-fundo-secundario);
+    border-radius: 3px;
+    padding: 4px;
+}

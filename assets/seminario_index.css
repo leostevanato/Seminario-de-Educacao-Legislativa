@@ -1,0 +1,92 @@
+:root {
+    --cor-fonte-preto: #000;
+    --cor-fundo-branco: #fff;
+    --cor-fundo-principal: #9FB96F;
+    --cor-fundo-secundario: #BFD990;
+}
+
+.conteudo {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+
+}
+
+/* ESCONDER ELEMENTOS MOODLE INDEX*/
+/*Esconder Imagem no topo da página*/
+#page{
+    margin-top: -150px;
+}
+
+/*Esconder elementos padrão do Moodle acima do menu */
+#page-navbar > nav > ul,
+#page-header > div > div > div > div >div.mr-auto,
+#page-header > div > div > div > div.d-flex.flex-wrap,
+h3.sectionname,
+#completionprogressid {
+    display: none;
+}
+
+/* Esconder Borda Padrão do Moodle da área do conteúdo */
+.course-content ul.topics li.section .content{
+    border: 0;
+}
+
+/*Fundo área de navegação*/
+#section-0 > div.content > div.summary{
+    background-color: var(--cor-fundo-branco);
+    max-width: 1440px;
+}
+
+/* CONTEÚDO */
+.container{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* MENU LATERAL */
+.lateral{
+    font-size: 1.2rem;
+    background-color: #9FB96F;
+    padding: 1rem;
+    text-align: left;
+    color: var(--cor-fonte-preto);
+}
+
+.lateral a{
+    color: var(--cor-fonte-preto);
+}
+
+.icone_menu{
+    width: 8%;
+    margin-right: 0.5rem;
+}
+
+.inicio {
+    background-color: var(--cor-fundo-secundario);
+}
+
+/* PÁGINA INICIAL */
+#conteudo_inicio{
+    background-image: url("https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/272520/mod_folder/content/0/papel_de_parede.jpg?forcedownload=1");
+    padding: 2rem;
+    font-size: 1.25rem;
+}
+
+.titulo_inicio{
+    line-height: 1;
+}
+
+.titulo_destaque{
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.texto_destaque{
+    font-weight: 800;
+}
+
+.ativo{
+    background-color: var(--cor-fundo-secundario);
+    border-radius: 3px;
+    padding: 4px;
+}

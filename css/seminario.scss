@@ -1,0 +1,398 @@
+$verde-1: #BFDA90;
+$verde-2: #9FBA6F;
+$cinza-1: #222221;
+$pasta-imagens: "https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/";
+$pasta-logos: $pasta-imagens+"logos/";
+
+@mixin texto-padding-linhas {
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+@mixin lista-seta-1 {
+	ul {
+		font-size: 15px;
+		font-weight: 400;
+		list-style: none;
+		padding: 0;
+		margin: 8px 0;
+
+		li {
+			&:not(:last-child) {
+				margin-bottom: 6px;
+			}
+
+			&::before {
+				content: "»";
+				padding-right: 4px;
+				font-size: 12px;
+				font-weight: 700;
+				vertical-align: text-bottom;
+			}
+		}
+	}
+}
+
+@mixin img-logo($url, $w, $h) {
+	background: {
+		image: url($url);
+		repeat: no-repeat;
+	}
+
+	width: $w;
+	height: $h;
+}
+
+.pagelayout-course .headerbkg {
+	display: none;
+}
+
+.pagelayout-course div#learningcontent {
+	margin-top: 0 !important;
+}
+
+/*Esconder elementos padrão do Moodle acima do menu */
+#page-navbar > nav > ul,
+#page-header > div > div > div > div >div.mr-auto,
+#page-header > div > div > div > div.d-flex.flex-wrap,
+h3.sectionname,
+#completionprogressid {
+    display: none;
+}
+
+.course-content ul.topics li.section,
+.course-content ul.weeks li.section {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+/* Esconder Borda Padrão do Moodle da área do conteúdo */
+.course-content ul.topics li.section .content {
+    border: 0;
+}
+
+/*Fundo área de navegação*/
+#section-0 > div.content > div.summary {
+    background-color: #ffffff;
+    max-width: 1440px;
+}
+
+/* CONTEÚDO */
+.container {
+    margin: 0px;
+    padding: 0px;
+}
+
+#seminario-de-educacao-legislativa {
+	font-family: 'Helvetica';
+
+	&.container {
+		position: relative;
+		width: 360px;
+		/* height: 1110px; */
+		min-height: 544px;
+		background-color: #CCCCCC;
+		/* border: 1px solid red; */
+		margin: 0 auto;
+	}
+
+	#fundo-sombra {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba(34, 34, 33, 0.5);
+		display: none;
+		z-index: 4;
+	}
+
+	#coluna-lateral {
+		position: absolute;
+		width: 52px;
+		height: 100%;
+		left: 0;
+		background: $verde-2;
+		border-right: 1px solid $cinza-1;
+		z-index: 5;
+	}
+
+	#icone-menu {
+		position: absolute;
+		top: 56px;
+		left: 16px;
+		z-index: 6;
+		width: 20px;
+		height: 20px;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: .5s ease-in-out;
+		-moz-transition: .5s ease-in-out;
+		-o-transition: .5s ease-in-out;
+		transition: .5s ease-in-out;
+		cursor: pointer;
+
+		span {
+			display: block;
+			position: absolute;
+			height: 4px;
+			width: 100%;
+			background: $verde-1;
+			opacity: 1;
+			left: 0;
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+			-webkit-transition: .25s ease-in-out;
+			-moz-transition: .25s ease-in-out;
+			-o-transition: .25s ease-in-out;
+			transition: .25s ease-in-out;
+		}
+
+		span:nth-child(1) {
+			top: 0px;
+		}
+
+		span:nth-child(2) {
+			top: 8px;
+		}
+
+		span:nth-child(3) {
+			top: 16px;
+		}
+
+		&.aberto span:nth-child(1) {
+			top: 3px;
+			width: 16px;
+			-webkit-transform: rotate(-45deg);
+			-moz-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+
+		&.aberto span:nth-child(2) {
+			opacity: 0;
+			left: 110px;
+		}
+
+		&.aberto span:nth-child(3) {
+			top: 13px;
+			width: 16px;
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+	}
+
+	#botao-toggle-menu {
+		position: absolute;
+		width: 20px;
+		height: 21px;
+		top: 56px;
+		left: 16px;
+		z-index: 6;
+	}
+
+	#menu-lateral {
+		position: relative;
+		width: 120px;
+		height: 100%;
+		box-sizing: border-box;
+		margin: 0 auto 0 0;
+		padding-top: 88px;
+		text-align: center;
+		opacity: 0;
+		display: none;
+
+		.item-menu {
+			font-weight: 700;
+			font-size: 15px;
+			line-height: 100%;
+			text-align: center;
+			color: $cinza-1;
+			padding-top: 24px;
+			padding-bottom: 24px;
+			cursor: pointer;
+
+			&:first-child {
+				padding-top: 0;
+			}
+
+			&:hover {
+				// background-color: darkgrey;
+			}
+
+			&.ativo {
+				color: $verde-1;
+			}
+		}
+
+		.item-menu-separador {
+			width: 48px;
+			margin: 0 auto;
+			height: 1px;
+			background-color: $cinza-1;
+		}
+	}
+
+	.botao-cta {
+		position: absolute;
+		width: 106px;
+		height: 26px;
+		padding: 4px 6px 4px 8px;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 100%;
+		background: #FFFFFF;
+		cursor: pointer;
+	}
+
+	#coluna-conteudo {
+		position: relative;
+		height: 100%;
+		padding-left: 53px;
+		background-image: url($pasta-imagens + "bg_conteudo.jpg");
+		background-size: 546px;
+		background-repeat: no-repeat;
+		background-position: -179px -29px;
+
+		.item-conteudo {
+			position: relative;
+			display: none;
+			/* border: 1px solid blue; */
+
+			.titulo {
+				position: absolute;
+				width: 249px;
+				left: 40px;
+				top: 56px;
+				padding-bottom: 16px;
+				padding-left: 2px;
+				font-size: 21px;
+				line-height: 23px;
+				font-weight: 400;
+				background-color: $verde-1;
+			}
+
+			.descricao {
+				position: absolute;
+				width: 221px;
+				left: 44px;
+				top: 270px;
+				background-color: $verde-1;
+			}
+
+			.logos {
+				position: absolute;
+				width: 100%;
+				height: 484px;
+				bottom: 0;
+
+				padding: {
+					top: 40px;
+					left: 50px;
+				}
+
+				background: #ffffff;
+
+				.realizacao,
+				.apoio {
+					margin-top: 40px;
+
+					h2 {
+						font-size: 12px;
+						margin-bottom: 16px;
+					}
+				}
+
+				.educacao-legislativa-30-anos {
+					@include img-logo($pasta-logos + "educacao_legislativa_30_anos.jpg", 156px, 87px);
+				}
+
+				.camara-dos-deputados {
+					@include img-logo($pasta-logos + "camara_dos_deputados.jpg", 157px, 42px);
+				}
+
+				.abel {
+					@include img-logo($pasta-logos + "abel.jpg", 156px, 69px);
+
+					margin-bottom: 24px;
+				}
+
+				.senado-federal {
+					@include img-logo($pasta-logos + "senado_federal.jpg", 156px, 45px);
+				}
+			}
+
+			&[data-item="inicio"] {
+				height: 1110px;
+
+				.titulo span {
+					font-size: 36px;
+					line-height: 38px;
+					font-weight: 700;
+				}
+
+				.descricao {
+					padding-top: 2px;
+					padding-bottom: 0;
+					font-size: 15px;
+					line-height: 18px;
+
+					span {
+						&:nth-of-type(1) {
+							font-size: 21px;
+							line-height: 24px;
+							font-weight: 700;
+							background: $verde-2;
+							padding: 1px 3px;
+							@include texto-padding-linhas;
+						}
+
+						&:nth-of-type(2) {
+							font-weight: 700;
+						}
+
+						&:nth-of-type(n + 3) {
+							display: block;
+							font-size: 15px;
+							font-weight: 400;
+							padding: 0;
+							margin: 8px 0 6px 0;
+							
+							&::before {
+								content: "»";
+								padding-right: 4px;
+								font-size: 12px;
+								font-weight: 700;
+								vertical-align: text-bottom;
+							}
+						}
+					}
+
+					//@include lista-seta-1;
+				}
+
+				.botao-cta {
+					top: 533px;
+					left: 47px;
+				}
+			}
+
+			&[data-item="boas-vindas"] {}
+
+			&[data-item="acesse-o-evento"] {}
+
+			&[data-item="programacao"] {}
+
+			&[data-item="rede-do-legislativo"] {}
+
+			&[data-item="certificado"] {}
+
+			&[data-item="gravacoes"] {}
+
+		}
+	}
+}
