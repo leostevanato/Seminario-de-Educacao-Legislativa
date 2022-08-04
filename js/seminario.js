@@ -16,7 +16,7 @@ $(document).ready(() => {
 			.replace(/[\u0300-\u036f]/g, '')
 			.replace(/[\s_-]+/g, '-')
 			.replace(/^-+|-+$/g, '');
-
+	
 	function setItemMenuAtivo(elemento) {
 		if(typeof item_menu_ativo === 'undefined' || item_menu_ativo.getAttribute("data-item") != elemento.getAttribute("data-item")) {
 			if(itemMenuList) {
@@ -26,8 +26,14 @@ $(document).ready(() => {
 			elemento.classList.add("ativo");
 			item_menu_ativo = elemento;
 
-			document.querySelectorAll(".item-conteudo").forEach(item => item.style.display = "none");
-			document.querySelector('.item-conteudo[data-item="' + elemento.getAttribute("data-item") + '"]').style.display = "block";
+			document.querySelectorAll(".item-conteudo").forEach(item => item.classList.remove("ativo"));
+			document.querySelector('.item-conteudo[data-item="' + elemento.getAttribute("data-item") + '"]').classList.add("ativo");
+
+			if (document.querySelector('.item-conteudo[data-item="' + elemento.getAttribute("data-item") + '"]').getAttribute("data-mostrar-logos") === "true") {
+				document.querySelector('.logos').classList.add("ativo");
+			} else {
+				document.querySelector('.logos').classList.remove("ativo");
+			}
 		}
 	}
 
@@ -54,46 +60,69 @@ $(document).ready(() => {
 	var esquerda_menu = "";
 	var opacity_menu = 0;
 	var item_menu_ativo;
+	var layout_mobile_width = 768;
+	var layout_mobile = true;
+
+	if (window.screen.width >= layout_mobile_width) {
+		layout_mobile = false;
+	}
 
 	const iconeMenu = document.getElementById('icone-menu');
 	const menuLateral = document.getElementById('menu-lateral');
+	const resetarMenu = new Event('resetar');
 	const abrirMenu = new Event('abrir');
 	const fecharMenu = new Event('fechar');
 	const trocarMenu = new Event('trocar');
 	
-	menuLateral.addEventListener('abrir', function (e) {
-		menuLateral.classList.remove("fechado");
-		menuLateral.classList.add("aberto");
-		iconeMenu.classList.remove("fechado");
-		iconeMenu.classList.add("aberto");
-
-		largura_coluna = "172px";
-		esquerda_menu = "26px";
-		opacity_menu = 1;
-
-		menuLateral.style.display = "block";
+	menuLateral.addEventListener('resetar', function (e) {
+		menuLateral.classList.remove("aberto", "fechado");
+		largura_coluna = "";
+		esquerda_menu = "";
+		opacity_menu = 0;
+		menuLateral.removeAttribute('style');
+		document.getElementById('coluna-lateral').removeAttribute('style');
+		document.getElementById('fundo-sombra').removeAttribute('style');
+	}, false);
 		
-		animarMenu();
+	menuLateral.addEventListener('abrir', function (e) {
+		if (layout_mobile) {
+			menuLateral.classList.remove("fechado");
+			menuLateral.classList.add("aberto");
+			iconeMenu.classList.remove("fechado");
+			iconeMenu.classList.add("aberto");
+
+			largura_coluna = "172px";
+			esquerda_menu = "26px";
+			opacity_menu = 1;
+
+			menuLateral.style.display = "block";
+			
+			animarMenu();
+		}
 	}, false);
 	
 	menuLateral.addEventListener('fechar', function (e) {
-		menuLateral.classList.remove("aberto");
-		menuLateral.classList.add("fechado");
-		iconeMenu.classList.remove("aberto");
-		iconeMenu.classList.add("fechado");
+		if (layout_mobile) {
+			menuLateral.classList.remove("aberto");
+			menuLateral.classList.add("fechado");
+			iconeMenu.classList.remove("aberto");
+			iconeMenu.classList.add("fechado");
 
-		largura_coluna = "52px";
-		esquerda_menu = "0px";
-		opacity_menu = 0;
+			largura_coluna = "52px";
+			esquerda_menu = "0px";
+			opacity_menu = 0;
 
-		animarMenu();
+			animarMenu();
+		}
 	}, false);
 
 	menuLateral.addEventListener('trocar', function (e) {
-		if(menuLateral.classList.contains("aberto")) {
-			menuLateral.dispatchEvent(fecharMenu);
-		} else {
-			menuLateral.dispatchEvent(abrirMenu);
+		if (layout_mobile) {
+			if (menuLateral.classList.contains("aberto")) {
+				menuLateral.dispatchEvent(fecharMenu);
+			} else {
+				menuLateral.dispatchEvent(abrirMenu);
+			}
 		}
 	}, false);
 	
@@ -148,5 +177,22 @@ $(document).ready(() => {
 				}
 			}
 		});
+	});
+
+	// if (window.screen.width >= layout_mobile_width) {
+	// 	menuLateral.dispatchEvent(abrirMenu);
+	// }
+
+	// new ResizeObserver(() => {
+	// 	console.log(window.screen.width)
+	// }).observe(document.body);
+
+	window.addEventListener('resize', () => {
+		if (window.screen.width >= layout_mobile_width) {
+			layout_mobile = false;
+			menuLateral.dispatchEvent(resetarMenu);
+		} else {
+			layout_mobile = true;
+		}
 	});
 });
