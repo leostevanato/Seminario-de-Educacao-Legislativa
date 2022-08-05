@@ -34,15 +34,16 @@ h3.sectionname,
 }
 
 /* CONTEÚDO */
-.container-xl {
+.container-fluid {
   margin: 0px;
   padding: 0px;
 }
 
 #seminario-de-educacao-legislativa {
   font-family: "Helvetica";
+  color: #222221;
 }
-#seminario-de-educacao-legislativa.container-xl {
+#seminario-de-educacao-legislativa.container-fluid {
   position: relative;
   /* height: 1110px; */
   min-height: 544px;
@@ -51,7 +52,7 @@ h3.sectionname,
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
-  #seminario-de-educacao-legislativa.container-xl {
+  #seminario-de-educacao-legislativa.container-fluid {
     display: flex;
     align-items: stretch;
     width: unset;
@@ -181,7 +182,6 @@ h3.sectionname,
   font-size: 15px;
   line-height: 100%;
   text-align: center;
-  color: #222221;
   padding-top: 24px;
   padding-bottom: 24px;
   cursor: pointer;
@@ -240,12 +240,19 @@ h3.sectionname,
     font-size: 23px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa .botao-cta {
+    width: 163px;
+    height: 43px;
+    font-size: 27px;
+  }
+}
 #seminario-de-educacao-legislativa #coluna-conteudo {
   position: relative;
   height: 100%;
-  padding-top: 56px;
+  padding-top: 60px;
   padding-left: 92px;
-  background-image: url("../imagens/bg_conteudo.jpg");
+  background-image: url("https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/bg_conteudo.jpg");
   background-size: 546px;
   background-repeat: no-repeat;
   background-position: 96% -29px;
@@ -259,8 +266,20 @@ h3.sectionname,
 }
 @media only screen and (min-width: 768px) {
   #seminario-de-educacao-legislativa #coluna-conteudo {
-    background-size: 1040px;
-    background-position: right -260px;
+    background-size: 910px;
+    background-position: right -200px;
+    padding-left: 106px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo {
+    background-size: 100%;
+    background-position: right center;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo {
+    padding-left: 122px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo {
@@ -289,6 +308,7 @@ h3.sectionname,
   #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo .titulo {
     font-size: 30px;
     line-height: 32px;
+    margin-bottom: 64px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo .descricao {
@@ -305,12 +325,22 @@ h3.sectionname,
     height: 740px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] {
+    height: 800px;
+  }
+}
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .titulo {
   width: 250px;
 }
 @media only screen and (min-width: 576px) {
   #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .titulo {
     width: 400px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .titulo {
+    width: 500px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .titulo span {
@@ -342,6 +372,14 @@ h3.sectionname,
     margin-bottom: 56px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao {
+    width: 526px;
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 68px;
+  }
+}
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao span:nth-of-type(1) {
   font-size: 21px;
   line-height: 25px;
@@ -355,6 +393,12 @@ h3.sectionname,
   #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao span:nth-of-type(1) {
     font-size: 24px;
     line-height: 28px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao span:nth-of-type(1) {
+    font-size: 27px;
+    line-height: 31px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao span:nth-of-type(2) {
@@ -377,6 +421,11 @@ h3.sectionname,
 @media only screen and (min-width: 576px) {
   #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao span:nth-of-type(n + 3) {
     margin-bottom: 16px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao span:nth-of-type(n + 3) {
+    margin-bottom: 12px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao span:nth-of-type(n + 3)::before {
@@ -414,8 +463,16 @@ h3.sectionname,
 }
 @media only screen and (min-width: 768px) {
   #seminario-de-educacao-legislativa #coluna-conteudo .logos {
-    margin-left: -92px;
-    padding-left: 92px;
+    margin-left: -106px;
+    padding-left: 106px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .logos {
+    margin-left: -122px;
+    padding-left: 122px;
+    height: 91px;
+    padding-bottom: 0;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .logos.ativo {
@@ -426,6 +483,12 @@ h3.sectionname,
     display: flex;
     width: 290px;
     flex-flow: row wrap;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos {
+    width: 680px;
+    justify-content: space-between;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .realizacao,
@@ -454,8 +517,13 @@ h3.sectionname,
     width: 235px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .apoio {
+    width: 272px;
+  }
+}
 #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .educacao-legislativa-30-anos {
-  background-image: url("../imagens/logos/educacao_legislativa_30_anos.jpg");
+  background-image: url("https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/logos/educacao_legislativa_30_anos.jpg");
   background-repeat: no-repeat;
   width: 156px;
   height: 87px;
@@ -470,8 +538,17 @@ h3.sectionname,
     margin-bottom: 28px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .educacao-legislativa-30-anos {
+    width: 128px;
+    height: 72px;
+    background-size: 128px;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
 #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .camara-dos-deputados {
-  background-image: url("../imagens/logos/camara_dos_deputados.jpg");
+  background-image: url("https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/logos/camara_dos_deputados.jpg");
   background-repeat: no-repeat;
   width: 157px;
   height: 42px;
@@ -482,8 +559,14 @@ h3.sectionname,
     background-size: 123px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .camara-dos-deputados {
+    width: 123px;
+    background-size: 123px;
+  }
+}
 #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .abel {
-  background-image: url("../imagens/logos/abel.jpg");
+  background-image: url("https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/logos/abel.jpg");
   background-repeat: no-repeat;
   width: 156px;
   height: 69px;
@@ -499,8 +582,16 @@ h3.sectionname,
     margin-right: 20px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .abel {
+    width: 98px;
+    height: 50px;
+    background-size: 98px;
+    margin-right: 50px;
+  }
+}
 #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .senado-federal {
-  background-image: url("../imagens/logos/senado_federal.jpg");
+  background-image: url("https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/logos/senado_federal.jpg");
   background-repeat: no-repeat;
   width: 156px;
   height: 45px;

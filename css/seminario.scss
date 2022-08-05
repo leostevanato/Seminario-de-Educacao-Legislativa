@@ -1,9 +1,9 @@
-$bootstrap-breakpoint: "-xl";
+$bootstrap-breakpoint: "-fluid";
 $verde-1: #BFDA90;
 $verde-2: #9FBA6F;
 $cinza-1: #222221;
-// $pasta-imagens: "https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/";
-$pasta-imagens: "../imagens/";
+$pasta-imagens: "https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/";
+// $pasta-imagens: "../imagens/";
 $pasta-logos: $pasta-imagens+"logos/";
 
 $familia-fonte: 'Helvetica';
@@ -89,6 +89,7 @@ h3.sectionname,
 
 #seminario-de-educacao-legislativa {
 	font-family: $familia-fonte;
+	color: $cinza-1;
 
 	&.container#{$bootstrap-breakpoint} {
 		position: relative;
@@ -253,7 +254,6 @@ h3.sectionname,
 			font-size: 15px;
 			line-height: 100%;
 			text-align: center;
-			color: $cinza-1;
 			padding-top: 24px;
 			padding-bottom: 24px;
 			cursor: pointer;
@@ -316,12 +316,18 @@ h3.sectionname,
 			padding: 8px 10px 8px 16px;
 			font-size: 23px;
 		}
+
+		@media only screen and (min-width: 1200px) {
+			width: 163px;
+			height: 43px;
+			font-size: 27px;
+		}
 	}
 
 	#coluna-conteudo {
 		position: relative;
 		height: 100%;
-		padding-top: 56px;
+		padding-top: 60px;
 		padding-left: 92px;
 		background-image: url($pasta-imagens + "bg_conteudo.jpg");
 		background-size: 546px;
@@ -335,8 +341,18 @@ h3.sectionname,
 		}
 
 		@media only screen and (min-width: 768px) {
-			background-size: 1040px;
-			background-position: right -260px;
+			background-size: 910px;
+			background-position: right -200px;
+			padding-left: 106px;
+		}
+
+		@media only screen and (min-width: 992px) {
+			background-size: 100%;
+			background-position: right center;
+		}
+
+		@media only screen and (min-width: 1200px) {
+			padding-left: 122px;
 		}
 
 		.item-conteudo {
@@ -364,6 +380,7 @@ h3.sectionname,
 				@media only screen and (min-width: 1200px) {
 					font-size: 30px;
 					line-height: 32px;
+					margin-bottom: 64px;
 				}
 			}
 
@@ -389,11 +406,19 @@ h3.sectionname,
 					height: 740px;
 				}
 
+				@media only screen and (min-width: 1200px) {
+					height: 800px;
+				}
+
 				.titulo {
 					width: 250px;
 
 					@media only screen and (min-width: 576px) {
 						width: 400px;
+					}
+
+					@media only screen and (min-width: 768px) {
+						width: 500px;
 					}
 
 					span {
@@ -424,6 +449,13 @@ h3.sectionname,
 						margin-bottom: 56px;
 					}
 
+					@media only screen and (min-width: 1200px) {
+						width: 526px;
+						font-size: 24px;
+						line-height: 26px;
+						margin-bottom: 68px;
+					}
+
 					span {
 						&:nth-of-type(1) {
 							font-size: 21px;
@@ -436,6 +468,11 @@ h3.sectionname,
 							@media only screen and (min-width: 576px) {
 								font-size: 24px;
 								line-height: 28px;
+							}
+
+							@media only screen and (min-width: 1200px) {
+								font-size: 27px;
+								line-height: 31px;
 							}
 						}
 
@@ -458,6 +495,10 @@ h3.sectionname,
 
 							@media only screen and (min-width: 576px) {
 								margin-bottom: 16px;
+							}
+
+							@media only screen and (min-width: 576px) {
+								margin-bottom: 12px;
 							}
 							
 							&::before {
@@ -520,12 +561,15 @@ h3.sectionname,
 			}
 
 			@media only screen and (min-width: 768px) {
-				margin-left: -92px;
-				padding-left: 92px;
+				margin-left: -106px;
+				padding-left: 106px;
 			}
 			
 			@media only screen and (min-width: 1200px) {
-
+				margin-left: -122px;
+				padding-left: 122px;
+				height: 91px;
+				padding-bottom: 0;
 			}
 
 			&.ativo {
@@ -537,6 +581,11 @@ h3.sectionname,
 					display: flex;
 					width: 290px;
 					flex-flow: row wrap;
+				}
+
+				@media only screen and (min-width: 1200px) {
+					width: 680px;
+					justify-content: space-between;
 				}
 
 				.realizacao,
@@ -564,6 +613,11 @@ h3.sectionname,
 					@media only screen and (min-width: 576px) {
 						width: 235px;
 					}
+
+					@media only screen and (min-width: 1200px) {
+						width: 272px;
+					}
+						
 				}
 
 				.educacao-legislativa-30-anos {
@@ -579,12 +633,27 @@ h3.sectionname,
 							bottom: 28px;
 						}
 					}
+
+					@media only screen and (min-width: 1200px) {
+						width: 128px;
+						height: 72px;
+						background-size: 128px;
+						margin: {
+							right: 0;
+							bottom: 0;
+						}
+					}
 				}
 
 				.camara-dos-deputados {
 					@include img-logo($pasta-logos + "camara_dos_deputados.jpg", 157px, 42px);
 
 					@media only screen and (min-width: 576px) {
+						width: 123px;
+						background-size: 123px;
+					}
+
+					@media only screen and (min-width: 1200px) {
 						width: 123px;
 						background-size: 123px;
 					}
@@ -602,6 +671,13 @@ h3.sectionname,
 						background-size: 90px;
 						margin-bottom: 0;
 						margin-right: 20px;
+					}
+
+					@media only screen and (min-width: 1200px) {
+						width: 98px;
+						height: 50px;
+						background-size: 98px;
+						margin-right: 50px;
 					}
 				}
 

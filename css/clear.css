@@ -1,0 +1,104 @@
+#page {
+  margin-top: 48px;
+}
+
+#page-header .col-12.pt-3.pb-3 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#page-header .card-body {
+  padding: 0;
+}
+
+#page-header .card-body .d-flex:nth-child(1) {
+  display: none !important;
+}
+
+#page-header h1 {
+  display: none;
+}
+
+#page-header #page-navbar {
+  position: absolute;
+  top: 16px;
+  z-index: 100;
+}
+
+#page-header #page-navbar ul.breadcrumb li {
+  color: white;
+  background: unset;
+}
+
+#page-header #page-navbar ul.breadcrumb li a,
+#page-header #page-navbar ul.breadcrumb li.breadcrumb-item + .breadcrumb-item:before {
+  color: white;
+}
+
+#page-header #page-navbar ul.breadcrumb li:after {
+  background: unset;
+}
+
+#page-wrapper .headerbkg {
+  background-image: none;
+  display: none;
+}
+
+#page-wrapper #page div#learningcontent {
+  margin-top: 0 !important;
+}
+
+#page-wrapper #page div#learningcontent #page-content {
+  padding: 0 !important;
+}
+
+#page-wrapper #page div#learningcontent #page-content #region-main-box {
+  padding: 0;
+}
+
+#page-wrapper #page div#learningcontent #page-content #region-main-box #region-main {
+  padding: 0;
+  /*#maincontent, .modified, h2 {
+						display: none;
+					}*/
+}
+
+#page-wrapper #page div#learningcontent #page-content #region-main-box #region-main .box.generalbox {
+  padding: 0 !important;
+}
+
+#section-0 {
+  padding: 0;
+}
+
+@media (max-width: 576px) {
+  #section-0 {
+    padding-top: 0 !important;
+  }
+}
+
+#section-0 .content {
+  border: 0;
+}
+
+#section-0 .content .sectionname {
+  display: none;
+}
+
+#section-0 .content .summary {
+  padding: 0;
+}
+
+#section-0 .content .summary .no-overflow {
+  width: 100%;
+}
+
+#section-0 .content .section.img-text {
+  padding: 0;
+}
+
+#blocksliderbutton,
+#completionprogressid {
+  display: none;
+}
+/*# sourceMappingURL=clear.css.map */
