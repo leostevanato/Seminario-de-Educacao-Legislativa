@@ -25,7 +25,7 @@ function setPlayerYoutubeSize(event) {
 
 	if (window.screen.width > 1200) {
 		player.setSize(685, 385.3125);
-	} else if (window.screen.width >= 768 && window.screen.width < 1200) {
+	} else if (window.screen.width >= 576 && window.screen.width < 1200) {
 		player.setSize(396, 222.75);
 	} else {
 		player.setSize(242, 136.125);
@@ -59,6 +59,8 @@ $(document).ready(() => {
 
 			elemento.classList.add("ativo");
 			item_menu_ativo = elemento;
+
+			document.querySelector('#coluna-conteudo').dataset.itemAtivo = elemento.getAttribute("data-item");
 
 			document.querySelectorAll(".item-conteudo").forEach(item => item.classList.remove("ativo"));
 			document.querySelector('.item-conteudo[data-item="' + elemento.getAttribute("data-item") + '"]').classList.add("ativo");
@@ -218,14 +220,6 @@ $(document).ready(() => {
 			}
 		});
 	});
-
-	// if (window.screen.width >= layout_mobile_width) {
-	// 	menuLateral.dispatchEvent(abrirMenu);
-	// }
-
-	// new ResizeObserver(() => {
-	// 	console.log(window.screen.width)
-	// }).observe(document.body);
 
 	window.addEventListener('resize', () => {
 		if (window.screen.width >= layout_mobile_width) {
