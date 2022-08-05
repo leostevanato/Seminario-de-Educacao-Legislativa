@@ -1,3 +1,37 @@
+var script_tag_youtube = document.createElement('script');
+script_tag_youtube.src = "https://www.youtube.com/iframe_api";
+
+// Adiciona o script_tag_youtube criado antes de todos os scitps
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(script_tag_youtube, firstScriptTag);
+
+var player1;
+
+// This function creates an <iframe> (and YouTube player) after the API code downloads.
+function onYouTubeIframeAPIReady() {
+	player1 = new YT.Player('video-1', {
+		width: '242',
+		height: '136.125',
+		videoId: 'Tsq4ry3DDLQ',
+		events: {
+			'onReady': setPlayerYoutubeSize,
+		}
+	});
+}
+
+function setPlayerYoutubeSize(event) {
+	// event pode ser um evento (quando chamado dos events da função onYouTubeIframeAPIReady por exemplo) ou pode ser um elemento. Então fazemos a verificação para que player sempre receba o elemento correto.
+	let player = (typeof event.target === "undefined") ? event : event.target;
+
+	if (window.screen.width > 1200) {
+		player.setSize(685, 385.3125);
+	} else if (window.screen.width >= 768 && window.screen.width < 1200) {
+		player.setSize(396, 222.75);
+	} else {
+		player.setSize(242, 136.125);
+	}
+}
+
 $(document).ready(() => {
 	const itens_menu = [
 		"Início",
@@ -33,6 +67,12 @@ $(document).ready(() => {
 				document.querySelector('.logos').classList.add("ativo");
 			} else {
 				document.querySelector('.logos').classList.remove("ativo");
+			}
+
+			if (elemento.getAttribute("data-item") !== "boas-vindas") {
+				if (typeof player1 !== "undefined" && player1.getPlayerState() === 1) {
+					player1.pauseVideo();
+				}
 			}
 		}
 	}
@@ -194,5 +234,7 @@ $(document).ready(() => {
 		} else {
 			layout_mobile = true;
 		}
+
+		setPlayerYoutubeSize(player1);
 	});
 });

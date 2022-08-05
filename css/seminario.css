@@ -42,12 +42,12 @@ h3.sectionname,
 #seminario-de-educacao-legislativa {
   font-family: "Helvetica";
   color: #222221;
+  background-color: #BFDA90;
 }
 #seminario-de-educacao-legislativa.container-fluid {
   position: relative;
   /* height: 1110px; */
   min-height: 544px;
-  background-color: #CCCCCC;
   /* border: 1px solid red; */
   margin: 0 auto;
 }
@@ -252,7 +252,7 @@ h3.sectionname,
   height: 100%;
   padding-top: 60px;
   padding-left: 92px;
-  background-image: url("https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/bg_conteudo.jpg");
+  background-image: url("../imagens/bg_conteudo.jpg");
   background-size: 546px;
   background-repeat: no-repeat;
   background-position: 96% -29px;
@@ -443,6 +443,14 @@ h3.sectionname,
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .botao-cta {
   margin-left: 8px;
 }
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=boas-vindas] .titulo {
+  width: 244px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 100%;
+  letter-spacing: -0.015em;
+  color: #9FBA6F;
+}
 #seminario-de-educacao-legislativa #coluna-conteudo .logos {
   position: relative;
   width: 100%;
@@ -523,7 +531,7 @@ h3.sectionname,
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .educacao-legislativa-30-anos {
-  background-image: url("https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/logos/educacao_legislativa_30_anos.jpg");
+  background-image: url("../imagens/logos/educacao_legislativa_30_anos.jpg");
   background-repeat: no-repeat;
   width: 156px;
   height: 87px;
@@ -548,7 +556,7 @@ h3.sectionname,
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .camara-dos-deputados {
-  background-image: url("https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/logos/camara_dos_deputados.jpg");
+  background-image: url("../imagens/logos/camara_dos_deputados.jpg");
   background-repeat: no-repeat;
   width: 157px;
   height: 42px;
@@ -566,7 +574,7 @@ h3.sectionname,
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .abel {
-  background-image: url("https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/logos/abel.jpg");
+  background-image: url("../imagens/logos/abel.jpg");
   background-repeat: no-repeat;
   width: 156px;
   height: 69px;
@@ -591,7 +599,7 @@ h3.sectionname,
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .logos .container-logos .senado-federal {
-  background-image: url("https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/logos/senado_federal.jpg");
+  background-image: url("../imagens/logos/senado_federal.jpg");
   background-repeat: no-repeat;
   width: 156px;
   height: 45px;

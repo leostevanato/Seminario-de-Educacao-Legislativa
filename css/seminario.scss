@@ -2,8 +2,8 @@ $bootstrap-breakpoint: "-fluid";
 $verde-1: #BFDA90;
 $verde-2: #9FBA6F;
 $cinza-1: #222221;
-$pasta-imagens: "https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/";
-// $pasta-imagens: "../imagens/";
+// $pasta-imagens: "https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/";
+$pasta-imagens: "../imagens/";
 $pasta-logos: $pasta-imagens+"logos/";
 
 $familia-fonte: 'Helvetica';
@@ -90,13 +90,14 @@ h3.sectionname,
 #seminario-de-educacao-legislativa {
 	font-family: $familia-fonte;
 	color: $cinza-1;
+	background-color: $verde-1;
 
 	&.container#{$bootstrap-breakpoint} {
 		position: relative;
 		// width: 360px;
 		/* height: 1110px; */
 		min-height: 544px;
-		background-color: #CCCCCC;
+		// background-color: #CCCCCC;
 		/* border: 1px solid red; */
 		margin: 0 auto;
 
@@ -523,7 +524,16 @@ h3.sectionname,
 				}
 			}
 
-			&[data-item="boas-vindas"] {}
+			&[data-item="boas-vindas"] {
+				.titulo {
+					width: 244px;
+					font-weight: 700;
+					font-size: 42px;
+					line-height: 100%;
+					letter-spacing: -0.015em;
+					color: #9FBA6F;
+				}
+			}
 
 			&[data-item="acesse-o-evento"] {}
 
