@@ -23,7 +23,7 @@ function setPlayerYoutubeSize(event) {
 	// event pode ser um evento (quando chamado dos events da função onYouTubeIframeAPIReady por exemplo) ou pode ser um elemento. Então fazemos a verificação para que player sempre receba o elemento correto.
 	let player = (typeof event.target === "undefined") ? event : event.target;
 
-	if (window.screen.width > 1200) {
+	if (window.screen.width >= 1200) {
 		player.setSize(685, 385.3125);
 	} else if (window.screen.width >= 576 && window.screen.width < 1200) {
 		player.setSize(396, 222.75);

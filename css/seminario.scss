@@ -47,6 +47,28 @@ $familia-fonte: 'Helvetica';
 	height: $h;
 }
 
+/*
+tipo:
+ 1 = 2 bolas vazias
+ 2 = 1 bola vazia outra cheia
+ 3 = 2 bolas cheias
+ */
+@mixin caixa-svg-bg($tipo:1) {
+	$cor-caixa-fill: '%239FBA6F';
+	$cor-caixa-stroke: '%23222221';
+	$svg: "data:image/svg+xml,%3Csvg width='201' height='132' viewBox='0 0 201 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='199' height='130' fill='%239FBA6F' stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='16' cy='14' r='3'";
+
+	@if $tipo == 1 {
+		background-image: url("#{$svg} stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='30' cy='14' r='3' stroke='%23222221' stroke-width='2'/%3E%3Cpath d='M0 26 H200' stroke='%23222221' stroke-width='2'/%3E%3Crect x='42' y='11' width='146' height='6' stroke='%23222221' stroke-width='2'/%3E%3C/svg%3E%0A");
+	} @else if $tipo == 2 {
+		background-image: url("#{$svg} fill='%23222221' stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='30' cy='14' r='3' stroke='%23222221' stroke-width='2'/%3E%3Cpath d='M0 26 H200' stroke='%23222221' stroke-width='2'/%3E%3Crect x='42' y='11' width='146' height='6' stroke='%23222221' stroke-width='2'/%3E%3C/svg%3E%0A");
+	} @else {
+		background-image: url("#{$svg} fill='%23222221' stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='30' cy='14' r='3' fill='%23222221' stroke='%23222221' stroke-width='2'/%3E%3Cpath d='M0 26 H200' stroke='%23222221' stroke-width='2'/%3E%3Crect x='42' y='11' width='146' height='6' stroke='%23222221' stroke-width='2'/%3E%3C/svg%3E%0A");
+	}
+}
+
+/* INÍCIO - Layout moodle */
+
 .pagelayout-course .headerbkg {
 	display: none;
 }
@@ -55,7 +77,14 @@ $familia-fonte: 'Helvetica';
 	margin-top: 0 !important;
 }
 
-/*Esconder elementos padrão do Moodle acima do menu */
+#region-main-box,
+#region-main {
+	@media only screen and (max-width: 1200px) {
+		padding: 0;
+	}
+}
+
+/* Esconder elementos padrão do Moodle acima do menu */
 #page-navbar > nav > ul,
 #page-header > div > div > div > div >div.mr-auto,
 #page-header > div > div > div > div.d-flex.flex-wrap,
@@ -75,17 +104,14 @@ h3.sectionname,
     border: 0;
 }
 
-/*Fundo área de navegação*/
+/* Fundo área de navegação */
 #section-0 > div.content > div.summary {
     background-color: #ffffff;
+	padding: 0;
     max-width: 1440px;
 }
 
-/* CONTEÚDO */
-.container#{$bootstrap-breakpoint} {
-    margin: 0px;
-    padding: 0px;
-}
+/* FIM - Layout moodle */
 
 #seminario-de-educacao-legislativa {
 	font-family: $familia-fonte;
@@ -100,6 +126,7 @@ h3.sectionname,
 		// background-color: #CCCCCC;
 		/* border: 1px solid red; */
 		margin: 0 auto;
+		padding: 0px;
 
 		@media only screen and (min-width: 768px) {
 			display: flex;
@@ -400,6 +427,10 @@ h3.sectionname,
 			}
 		}
 
+		&[data-item-ativo="rede-do-legislativo"] {
+			padding-top: 48px;
+		}
+
 		.item-conteudo {
 			position: relative;
 			display: none;
@@ -648,7 +679,137 @@ h3.sectionname,
 
 			&[data-item="programacao"] {}
 
-			&[data-item="rede-do-legislativo"] {}
+			&[data-item="rede-do-legislativo"] {
+				height: 998px;
+
+				@media only screen and (min-width: 576px) {
+					height: 897px;
+				}
+
+				@media only screen and (min-width: 1200px) {
+					height: 800px;
+				}
+
+				.titulo {
+					width: 240px;
+					font-weight: 700;
+					font-size: 42px;
+					line-height: 100%;
+					letter-spacing: -0.015em;
+					color: $verde-2;
+					margin-bottom: 24px;
+
+					@media only screen and (min-width: 576px) {
+						width: 420px;
+						font-size: 70px;
+						letter-spacing: -0.02em;
+						margin-bottom: 34px;
+					}
+
+					@media only screen and (min-width: 1200px) {
+						font-size: 80px;
+						letter-spacing: normal;
+					}
+				}
+
+				.descricao {
+					width: 240px;
+					line-height: 112%;
+					margin-bottom: 48px;
+					
+					@media only screen and (min-width: 576px) {
+						width: 396px;
+						font-size: 16px;
+						margin-bottom: 56px;
+
+						p {
+							margin-bottom: 1.6rem;
+						}
+					}
+
+					@media only screen and (min-width: 1200px) {
+						width: 635px;
+						font-size: 20px;
+					}
+				}
+
+				.caixas {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					padding: 0px;
+					gap: 24px;
+
+					@media only screen and (min-width: 576px) {
+						width: 400px;
+						flex-direction: row;
+						flex-wrap: wrap;
+						gap: 32px;
+					}
+
+					@media only screen and (min-width: 1200px) {
+						width: auto;
+						gap: 42px;
+					}
+
+					.caixa {
+						$bg-svg-p: 156px 103px;
+						$bg-svg-m: 182px 120px;
+						$bg-svg-g: 201px 132px;
+
+						width: 156px;
+						height: 103px;
+						padding: 42px 20px 0 20px;
+						text-align: center;
+						font-size: 15px;
+						font-weight: 700;
+						line-height: 112%;
+						color: #FFFFFF;
+						letter-spacing: 0.05em;
+						
+						@media only screen and (min-width: 576px) {
+							width: 182px;
+							height: 120px;
+							font-size: 18px;
+							padding-top: 50px;
+						}
+	
+						@media only screen and (min-width: 1200px) {
+							width: 201px;
+							height: 132px;
+							font-size: 20px;
+						}
+
+						&:nth-of-type(1) {
+							@include caixa-svg-bg(1);
+						}
+
+						&:nth-of-type(2) {
+							@include caixa-svg-bg(2);
+						}
+
+						&:nth-of-type(3) {
+							@include caixa-svg-bg(3);
+						}
+
+						&:nth-of-type(1),
+						&:nth-of-type(2),
+						&:nth-of-type(3) {
+							background-size: $bg-svg-p;
+							background-repeat: no-repeat;
+
+							@media only screen and (min-width: 576px) {
+								background-size: $bg-svg-m;
+							}
+
+							@media only screen and (min-width: 1200px) {
+								background-size: $bg-svg-g;
+							}
+						}
+					}
+				}
+
+			}
 
 			&[data-item="certificado"] {}
 

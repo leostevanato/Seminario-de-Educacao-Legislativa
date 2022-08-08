@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/*
+tipo:
+ 1 = 2 bolas vazias
+ 2 = 1 bola vazia outra cheia
+ 3 = 2 bolas cheias
+ */
+/* INÍCIO - Layout moodle */
 .pagelayout-course .headerbkg {
   display: none;
 }
@@ -7,7 +14,14 @@
   margin-top: 0 !important;
 }
 
-/*Esconder elementos padrão do Moodle acima do menu */
+@media only screen and (max-width: 1200px) {
+  #region-main-box,
+#region-main {
+    padding: 0;
+  }
+}
+
+/* Esconder elementos padrão do Moodle acima do menu */
 #page-navbar > nav > ul,
 #page-header > div > div > div > div > div.mr-auto,
 #page-header > div > div > div > div.d-flex.flex-wrap,
@@ -27,18 +41,14 @@ h3.sectionname,
   border: 0;
 }
 
-/*Fundo área de navegação*/
+/* Fundo área de navegação */
 #section-0 > div.content > div.summary {
   background-color: #ffffff;
+  padding: 0;
   max-width: 1440px;
 }
 
-/* CONTEÚDO */
-.container-fluid {
-  margin: 0px;
-  padding: 0px;
-}
-
+/* FIM - Layout moodle */
 #seminario-de-educacao-legislativa {
   font-family: "Helvetica";
   color: #222221;
@@ -50,6 +60,7 @@ h3.sectionname,
   min-height: 544px;
   /* border: 1px solid red; */
   margin: 0 auto;
+  padding: 0px;
 }
 @media only screen and (min-width: 768px) {
   #seminario-de-educacao-legislativa.container-fluid {
@@ -311,6 +322,9 @@ h3.sectionname,
     background-position: 95% 355px;
   }
 }
+#seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=rede-do-legislativo] {
+  padding-top: 48px;
+}
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo {
   position: relative;
   display: none;
@@ -542,6 +556,133 @@ h3.sectionname,
   #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=boas-vindas] .botao-cta {
     margin-top: 56px;
     margin-left: 261px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] {
+  height: 998px;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] {
+    height: 897px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] {
+    height: 800px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .titulo {
+  width: 240px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 100%;
+  letter-spacing: -0.015em;
+  color: #9FBA6F;
+  margin-bottom: 24px;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .titulo {
+    width: 420px;
+    font-size: 70px;
+    letter-spacing: -0.02em;
+    margin-bottom: 34px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .titulo {
+    font-size: 80px;
+    letter-spacing: normal;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .descricao {
+  width: 240px;
+  line-height: 112%;
+  margin-bottom: 48px;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .descricao {
+    width: 396px;
+    font-size: 16px;
+    margin-bottom: 56px;
+  }
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .descricao p {
+    margin-bottom: 1.6rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .descricao {
+    width: 635px;
+    font-size: 20px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas {
+    width: 400px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas {
+    width: auto;
+    gap: 42px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa {
+  width: 156px;
+  height: 103px;
+  padding: 42px 20px 0 20px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 112%;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa {
+    width: 182px;
+    height: 120px;
+    font-size: 18px;
+    padding-top: 50px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa {
+    width: 201px;
+    height: 132px;
+    font-size: 20px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(1) {
+  background-image: url("data:image/svg+xml,%3Csvg width='201' height='132' viewBox='0 0 201 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='199' height='130' fill='%239FBA6F' stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='16' cy='14' r='3' stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='30' cy='14' r='3' stroke='%23222221' stroke-width='2'/%3E%3Cpath d='M0 26 H200' stroke='%23222221' stroke-width='2'/%3E%3Crect x='42' y='11' width='146' height='6' stroke='%23222221' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(2) {
+  background-image: url("data:image/svg+xml,%3Csvg width='201' height='132' viewBox='0 0 201 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='199' height='130' fill='%239FBA6F' stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='16' cy='14' r='3' fill='%23222221' stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='30' cy='14' r='3' stroke='%23222221' stroke-width='2'/%3E%3Cpath d='M0 26 H200' stroke='%23222221' stroke-width='2'/%3E%3Crect x='42' y='11' width='146' height='6' stroke='%23222221' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(3) {
+  background-image: url("data:image/svg+xml,%3Csvg width='201' height='132' viewBox='0 0 201 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='199' height='130' fill='%239FBA6F' stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='16' cy='14' r='3' fill='%23222221' stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='30' cy='14' r='3' fill='%23222221' stroke='%23222221' stroke-width='2'/%3E%3Cpath d='M0 26 H200' stroke='%23222221' stroke-width='2'/%3E%3Crect x='42' y='11' width='146' height='6' stroke='%23222221' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(1), #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(2), #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(3) {
+  background-size: 156px 103px;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(1), #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(2), #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(3) {
+    background-size: 182px 120px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(1), #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(2), #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(3) {
+    background-size: 201px 132px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .logos {
