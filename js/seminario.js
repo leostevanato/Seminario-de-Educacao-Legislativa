@@ -36,11 +36,11 @@ $(document).ready(() => {
 	const itens_menu = [
 		"Início",
 		"Boas-vindas",
-		"Acesse o evento",
+		// "Acesse o evento",
 		"Programação",
 		"Rede do Legislativo",
-		"Certificado",
-		"Gravações"
+		// "Certificado",
+		// "Gravações"
 	];
 
 	const slugify = str =>

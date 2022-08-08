@@ -234,6 +234,7 @@ h3.sectionname,
   }
 }
 #seminario-de-educacao-legislativa .botao-cta {
+  display: none;
   width: 106px;
   height: 26px;
   padding: 4px 6px 4px 8px;
