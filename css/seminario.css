@@ -14,11 +14,14 @@ tipo:
   margin-top: 0 !important;
 }
 
-@media only screen and (max-width: 1200px) {
-  #region-main-box,
+div#page-content,
+#region-main-box,
 #region-main {
-    padding: 0;
-  }
+  padding: 0;
+}
+
+#region-main {
+  overflow-x: visible;
 }
 
 /* Esconder elementos padrão do Moodle acima do menu */
@@ -45,7 +48,10 @@ h3.sectionname,
 #section-0 > div.content > div.summary {
   background-color: #ffffff;
   padding: 0;
-  max-width: 1440px;
+}
+
+.editing .course-content ul.topics li.section .left, .editing .course-content ul.topics li.section .right {
+  padding: 0;
 }
 
 /* FIM - Layout moodle */
@@ -294,7 +300,7 @@ h3.sectionname,
 }
 @media only screen and (min-width: 1200px) {
   #seminario-de-educacao-legislativa #coluna-conteudo {
-    padding-left: 122px;
+    padding-left: 172px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=inicio] {
@@ -388,7 +394,7 @@ h3.sectionname,
 }
 @media only screen and (min-width: 1200px) {
   #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] {
-    height: 800px;
+    height: 760px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .titulo {
@@ -514,7 +520,7 @@ h3.sectionname,
 }
 @media only screen and (min-width: 1200px) {
   #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=boas-vindas] {
-    height: 890px;
+    height: 870px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=boas-vindas] .titulo {
@@ -736,8 +742,8 @@ h3.sectionname,
 }
 @media only screen and (min-width: 1200px) {
   #seminario-de-educacao-legislativa #coluna-conteudo .logos {
-    margin-left: -122px;
-    padding-left: 122px;
+    margin-left: -172px;
+    padding-left: 172px;
     height: 91px;
     padding-bottom: 0;
   }
