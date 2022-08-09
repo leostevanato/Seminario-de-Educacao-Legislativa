@@ -677,7 +677,12 @@ h3.sectionname,
 
 			&[data-item="acesse-o-evento"] {}
 
-			&[data-item="programacao"] {}
+			&[data-item="programacao"] {
+				.botao-cta {
+					display: block;
+					width: fit-content;
+				}
+			}
 
 			&[data-item="rede-do-legislativo"] {
 				height: 998px;
@@ -766,6 +771,7 @@ h3.sectionname,
 						line-height: 112%;
 						color: #FFFFFF;
 						letter-spacing: 0.05em;
+						cursor: pointer;
 						
 						@media only screen and (min-width: 576px) {
 							width: 182px;

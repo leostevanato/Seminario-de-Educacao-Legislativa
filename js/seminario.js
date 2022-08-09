@@ -207,20 +207,34 @@ $(document).ready(() => {
 
 	botaoCtaList.forEach((element) => {
 		element.addEventListener("click", function (event) {
-			if(typeof element.getAttribute("data-alvo") !== 'undefined') {
+			if (typeof element.getAttribute("data-alvo") !== 'undefined' && typeof element.getAttribute("data-alvo") !== 'null') {
 				let elemento;
 	
-				if(document.querySelector('.item-menu[data-item="'+ element.getAttribute("data-alvo") +'"]')) {
-					elemento = document.querySelector('.item-menu[data-item="'+ element.getAttribute("data-alvo") +'"]');
+				if (document.querySelector('.item-menu[data-item="' + element.getAttribute("data-alvo") + '"]')) {
+					elemento = document.querySelector('.item-menu[data-item="' + element.getAttribute("data-alvo") + '"]');
 				}
 				
-				if(typeof elemento !== 'undefined') {
+				if (typeof elemento !== 'undefined') {
 					setItemMenuAtivo(elemento);
 				}
 			}
+			
+			if (typeof element.getAttribute("data-link") !== 'undefined' && typeof element.getAttribute("data-link") !== 'null') {
+				window.open(element.getAttribute("data-link"));
+				return false;
+			}
 		});
 	});
+	
+	var caixas = document.querySelectorAll(".caixa");
 
+	caixas.forEach((element) => {
+		element.addEventListener("click", function (event) {
+			window.open(element.getAttribute("data-link"));
+			return false;
+		});
+	});
+	
 	window.addEventListener('resize', () => {
 		if (window.screen.width >= layout_mobile_width) {
 			layout_mobile = false;
