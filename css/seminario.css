@@ -100,9 +100,8 @@ h3.sectionname,
 }
 @media only screen and (min-width: 1200px) {
   #seminario-de-educacao-legislativa #coluna-lateral {
-    position: relative;
     width: 285px;
-    height: unset;
+    border-right-width: 2px;
   }
 }
 #seminario-de-educacao-legislativa #icone-menu {
@@ -231,6 +230,7 @@ h3.sectionname,
 @media only screen and (min-width: 1200px) {
   #seminario-de-educacao-legislativa #menu-lateral .item-menu-separador {
     width: 88px;
+    height: 2px;
   }
 }
 #seminario-de-educacao-legislativa .botao-cta {
