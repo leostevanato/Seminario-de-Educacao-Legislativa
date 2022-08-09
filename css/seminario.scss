@@ -1,3 +1,5 @@
+@use "sass:string";
+
 $bootstrap-breakpoint: "-fluid";
 $verde-1: #BFDA90;
 $verde-2: #9FBA6F;
@@ -47,6 +49,9 @@ $familia-fonte: 'Helvetica';
 	height: $h;
 }
 
+$cor-caixa-fill: '%239FBA6F';
+$cor-caixa-stroke: '%23222221';
+	
 /*
 tipo:
  1 = 2 bolas vazias
@@ -54,19 +59,22 @@ tipo:
  3 = 2 bolas cheias
  */
 @mixin caixa-svg-bg($tipo:1) {
-	$cor-caixa-fill: '%239FBA6F';
-	$cor-caixa-stroke: '%23222221';
-	$svg: "data:image/svg+xml,%3Csvg width='201' height='132' viewBox='0 0 201 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='199' height='130' fill='%239FBA6F' stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='16' cy='14' r='3'";
+	$svg: "data:image/svg+xml,%3Csvg width='201' height='132' viewBox='0 0 201 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='199' height='130' fill='%239FBA6F' stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3Ccircle cx='16' cy='14' r='3'";
 
 	@if $tipo == 1 {
-		background-image: url("#{$svg} stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='30' cy='14' r='3' stroke='%23222221' stroke-width='2'/%3E%3Cpath d='M0 26 H200' stroke='%23222221' stroke-width='2'/%3E%3Crect x='42' y='11' width='146' height='6' stroke='%23222221' stroke-width='2'/%3E%3C/svg%3E%0A");
+		background-image: url("#{$svg} stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3Ccircle cx='30' cy='14' r='3' stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3Cpath d='M0 26 H200' stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3Crect x='42' y='11' width='146' height='6' stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3C/svg%3E%0A");
 	} @else if $tipo == 2 {
-		background-image: url("#{$svg} fill='%23222221' stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='30' cy='14' r='3' stroke='%23222221' stroke-width='2'/%3E%3Cpath d='M0 26 H200' stroke='%23222221' stroke-width='2'/%3E%3Crect x='42' y='11' width='146' height='6' stroke='%23222221' stroke-width='2'/%3E%3C/svg%3E%0A");
+		background-image: url("#{$svg} fill='#{$cor-caixa-stroke}' stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3Ccircle cx='30' cy='14' r='3' stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3Cpath d='M0 26 H200' stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3Crect x='42' y='11' width='146' height='6' stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3C/svg%3E%0A");
 	} @else {
-		background-image: url("#{$svg} fill='%23222221' stroke='%23222221' stroke-width='2'/%3E%3Ccircle cx='30' cy='14' r='3' fill='%23222221' stroke='%23222221' stroke-width='2'/%3E%3Cpath d='M0 26 H200' stroke='%23222221' stroke-width='2'/%3E%3Crect x='42' y='11' width='146' height='6' stroke='%23222221' stroke-width='2'/%3E%3C/svg%3E%0A");
+		background-image: url("#{$svg} fill='#{$cor-caixa-stroke}' stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3Ccircle cx='30' cy='14' r='3' fill='#{$cor-caixa-stroke}' stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3Cpath d='M0 26 H200' stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3Crect x='42' y='11' width='146' height='6' stroke='#{$cor-caixa-stroke}' stroke-width='2'/%3E%3C/svg%3E%0A");
 	}
 }
 
+@mixin icone-link-svg($cor:$cor-caixa-stroke) {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='#{$cor}' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1' /%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	
+}
 /* INÍCIO - Layout moodle */
 
 .pagelayout-course .headerbkg {
@@ -302,11 +310,27 @@ h3.sectionname,
 			}
 
 			&:hover {
-				// background-color: darkgrey;
+				color: $verde-1;
 			}
 
 			&.ativo {
 				color: $verde-1;
+			}
+
+			&[data-link]:not([data-link=""]) {
+				&::after {
+					content: '';
+					display: inline-block;
+					width: 18px;
+					height: 18px;
+					margin-left: 4px;
+					vertical-align: bottom;
+					@include icone-link-svg;
+				}
+
+				&:hover::after {
+					@include icone-link-svg('%23BFDA90');
+				}
 			}
 		}
 

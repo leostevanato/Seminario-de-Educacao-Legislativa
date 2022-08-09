@@ -63,6 +63,7 @@ $(document).ready(() => {
 			document.querySelector('#coluna-conteudo').dataset.itemAtivo = elemento.getAttribute("data-item");
 
 			document.querySelectorAll(".item-conteudo").forEach(item => item.classList.remove("ativo"));
+			
 			document.querySelector('.item-conteudo[data-item="' + elemento.getAttribute("data-item") + '"]').classList.add("ativo");
 
 			if (document.querySelector('.item-conteudo[data-item="' + elemento.getAttribute("data-item") + '"]').getAttribute("data-mostrar-logos") === "true") {
@@ -193,12 +194,23 @@ $(document).ready(() => {
 	var itemMenuList = document.querySelectorAll(".item-menu");
 
 	itemMenuList.forEach((element) => {
+		let itemConteudo = document.querySelector('.item-conteudo[data-item="' + element.getAttribute("data-item") + '"]');
+
+		if (itemConteudo.getAttribute("data-link") != null) {
+			element.dataset.link = itemConteudo.getAttribute("data-link");
+		}
+
 		element.addEventListener("click", function (event) {
-			setItemMenuAtivo(element);
-			menuLateral.dispatchEvent(fecharMenu);
+			if (element.getAttribute("data-link") != null) {
+				window.open(element.getAttribute("data-link"));
+				return false;
+			} else {
+				setItemMenuAtivo(element);
+				menuLateral.dispatchEvent(fecharMenu);
+			}
 		});
 	});
-	
+
 	iconeMenu.addEventListener("click", function () {
 		menuLateral.dispatchEvent(trocarMenu);
 	}, false);
@@ -207,7 +219,7 @@ $(document).ready(() => {
 
 	botaoCtaList.forEach((element) => {
 		element.addEventListener("click", function (event) {
-			if (typeof element.getAttribute("data-alvo") !== 'undefined' && typeof element.getAttribute("data-alvo") !== 'null') {
+			if (element.getAttribute("data-alvo") != null) {
 				let elemento;
 	
 				if (document.querySelector('.item-menu[data-item="' + element.getAttribute("data-alvo") + '"]')) {
@@ -219,7 +231,7 @@ $(document).ready(() => {
 				}
 			}
 			
-			if (typeof element.getAttribute("data-link") !== 'undefined' && typeof element.getAttribute("data-link") !== 'null') {
+			if (element.getAttribute("data-link") != null) {
 				window.open(element.getAttribute("data-link"));
 				return false;
 			}
