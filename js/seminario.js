@@ -39,7 +39,7 @@ $(document).ready(() => {
 		"Início",
 		"Boas-vindas",
 		// "Acesse o evento",
-		"Programação",
+		"Programação em PDF",
 		"Rede do Legislativo",
 		// "Certificado",
 		// "Gravações"
