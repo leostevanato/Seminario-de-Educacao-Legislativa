@@ -37,6 +37,7 @@ function setPlayerYoutubeSize(event) {
 $(document).ready(() => {
 	const itens_menu = [
 		"Início",
+		"Sobre o evento",
 		"Boas-vindas",
 		// "Acesse o evento",
 		"Programação em PDF",

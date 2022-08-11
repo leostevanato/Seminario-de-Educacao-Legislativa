@@ -388,9 +388,11 @@ h3.sectionname,
 	#coluna-conteudo {
 		position: relative;
 		height: 100%;
+		min-height: 544px;
 		padding: {
-			top: 60px;
+			top: 48px;
 			left: 92px;
+			bottom: 48px;
 		}
 
 		@media only screen and (min-width: 576px) {
@@ -406,6 +408,8 @@ h3.sectionname,
 		}
 
 		&[data-item-ativo="inicio"] {
+			padding-bottom: 0;
+
 			background: {
 				image: url($pasta-imagens + "bg_conteudo.jpg");
 				size: 546px;
@@ -429,8 +433,6 @@ h3.sectionname,
 		}
 
 		&[data-item-ativo="boas-vindas"] {
-			padding-top: 48px;
-
 			background: {
 				image: url($pasta-imagens + "bg_conteudo.jpg");
 				size: 600px;
@@ -453,35 +455,34 @@ h3.sectionname,
 		}
 
 		&[data-item-ativo="rede-do-legislativo"] {
-			padding-top: 48px;
+			
 		}
 
 		.item-conteudo {
 			position: relative;
 			display: none;
-			/* border: 1px solid blue; */
 
 			&.ativo {
 				display: block;
 			}
 
 			.titulo {
-				padding: 0 2px 2px 2px;
-				margin-bottom: 48px;
-				font-size: 21px;
-				line-height: 23px;
-				font-weight: 400;
-				background-color: $verde-1;
+				font-weight: 700;
+				font-size: 42px;
+				line-height: 100%;
+				letter-spacing: -0.015em;
+				color: $verde-2;
+				margin-bottom: 24px;
 
 				@media only screen and (min-width: 576px) {
-					font-size: 24px;
-					line-height: 26px;
+					font-size: 70px;
+					letter-spacing: -0.02em;
+					margin-bottom: 34px;
 				}
-				
+
 				@media only screen and (min-width: 1200px) {
-					font-size: 30px;
-					line-height: 32px;
-					margin-bottom: 64px;
+					font-size: 80px;
+					letter-spacing: normal;
 				}
 			}
 
@@ -492,11 +493,12 @@ h3.sectionname,
 				line-height: 18px;
 
 				@media only screen and (min-width: 576px) {
-					// font-size: 24px;
+					font-size: 16px;
 				}
 				
 				@media only screen and (min-width: 1200px) {
-					// font-size: ;
+					font-size: 20px;
+					line-height: 22px;
 				}
 			}
 
@@ -511,15 +513,29 @@ h3.sectionname,
 					height: 760px;
 				}
 
-				.titulo {
+				h2 {
 					width: 250px;
+					padding: 0 2px 2px 2px;
+					margin-bottom: 48px;
+					font-size: 21px;
+					line-height: 23px;
+					font-weight: 400;
+					background-color: $verde-1;
 
 					@media only screen and (min-width: 576px) {
 						width: 400px;
+						font-size: 24px;
+						line-height: 26px;
 					}
 
 					@media only screen and (min-width: 768px) {
 						width: 500px;
+					}
+
+					@media only screen and (min-width: 1200px) {
+						font-size: 30px;
+						line-height: 32px;
+						margin-bottom: 64px;
 					}
 
 					span {
@@ -615,8 +631,6 @@ h3.sectionname,
 							}
 						}
 					}
-
-					//@include lista-seta-1;
 				}
 
 				.botao-cta {
@@ -625,37 +639,6 @@ h3.sectionname,
 			}
 
 			&[data-item="boas-vindas"] {
-				height: 574px;
-
-				@media only screen and (min-width: 576px) {
-					height: 660px;
-				}
-
-				@media only screen and (min-width: 1200px) {
-					height: 870px;
-				}
-
-				.titulo {
-					// width: 244px;
-					font-weight: 700;
-					font-size: 42px;
-					line-height: 100%;
-					letter-spacing: -0.015em;
-					color: $verde-2;
-					margin-bottom: 24px;
-
-					@media only screen and (min-width: 576px) {
-						font-size: 70px;
-						letter-spacing: -0.02em;
-						margin-bottom: 34px;
-					}
-
-					@media only screen and (min-width: 1200px) {
-						font-size: 80px;
-						letter-spacing: normal;
-					}
-				}
-
 				.descricao {
 					width: 240px;
 					margin-bottom: 32px;
@@ -700,6 +683,35 @@ h3.sectionname,
 				}
 			}
 
+			&[data-item="sobre-o-evento"] {
+				img {
+					width: 242px;
+					margin-bottom: 32px;
+
+					@media only screen and (min-width: 576px) {
+						width: 396px;
+						margin-bottom: 40px;
+					}
+
+					@media only screen and (min-width: 1200px) {
+						width: 685px;
+						margin-bottom: 48px;
+					}
+				}
+
+				.descricao {
+					width: 242px;
+
+					@media only screen and (min-width: 576px) {
+						width: 396px;
+					}
+
+					@media only screen and (min-width: 1200px) {
+						width: 685px;
+					}
+				}
+			}
+
 			&[data-item="acesse-o-evento"] {}
 
 			&[data-item="programacao"] {
@@ -710,35 +722,11 @@ h3.sectionname,
 			}
 
 			&[data-item="rede-do-legislativo"] {
-				height: 998px;
-
-				@media only screen and (min-width: 576px) {
-					height: 897px;
-				}
-
-				@media only screen and (min-width: 1200px) {
-					height: 800px;
-				}
-
 				.titulo {
 					width: 240px;
-					font-weight: 700;
-					font-size: 42px;
-					line-height: 100%;
-					letter-spacing: -0.015em;
-					color: $verde-2;
-					margin-bottom: 24px;
 
 					@media only screen and (min-width: 576px) {
 						width: 420px;
-						font-size: 70px;
-						letter-spacing: -0.02em;
-						margin-bottom: 34px;
-					}
-
-					@media only screen and (min-width: 1200px) {
-						font-size: 80px;
-						letter-spacing: normal;
 					}
 				}
 
