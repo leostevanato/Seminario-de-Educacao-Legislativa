@@ -426,13 +426,6 @@ h3.sectionname,
 					position: right -200px;
 				}
 			}
-	
-			@media only screen and (min-width: 992px) {
-				background: {
-					size: 100%;
-					position: right center;
-				}
-			}
 		}
 
 		&[data-item-ativo="boas-vindas"] {
@@ -454,8 +447,7 @@ h3.sectionname,
 	
 			@media only screen and (min-width: 992px) {
 				background: {
-					size: 140%;
-					position: 95% 355px;
+					position: 95% 330px;
 				}
 			}
 		}

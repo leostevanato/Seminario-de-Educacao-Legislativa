@@ -321,12 +321,6 @@ h3.sectionname,
     background-position: right -200px;
   }
 }
-@media only screen and (min-width: 992px) {
-  #seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=inicio] {
-    background-size: 100%;
-    background-position: right center;
-  }
-}
 #seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=boas-vindas] {
   padding-top: 48px;
   background-image: url("../imagens/bg_conteudo.jpg");
@@ -342,8 +336,7 @@ h3.sectionname,
 }
 @media only screen and (min-width: 992px) {
   #seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=boas-vindas] {
-    background-size: 140%;
-    background-position: 95% 355px;
+    background-position: 95% 330px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=rede-do-legislativo] {
