@@ -503,20 +503,10 @@ h3.sectionname,
 			}
 
 			&[data-item="inicio"] {
-				height: 582px;
-
-				@media only screen and (min-width: 576px) {
-					height: 740px;
-				}
-
-				@media only screen and (min-width: 1200px) {
-					height: 760px;
-				}
-
-				h2 {
+				.titulo-principal {
 					width: 250px;
 					padding: 0 2px 2px 2px;
-					margin-bottom: 48px;
+					margin-bottom: 32px;
 					font-size: 21px;
 					line-height: 23px;
 					font-weight: 400;
@@ -526,13 +516,11 @@ h3.sectionname,
 						width: 400px;
 						font-size: 24px;
 						line-height: 26px;
-					}
-
-					@media only screen and (min-width: 768px) {
-						width: 500px;
+						margin-bottom: 46px;
 					}
 
 					@media only screen and (min-width: 1200px) {
+						width: 500px;
 						font-size: 30px;
 						line-height: 32px;
 						margin-bottom: 64px;
@@ -555,80 +543,134 @@ h3.sectionname,
 					}
 				}
 
-				.descricao {
-					width: 221px;
+				.informacoes {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 12px;
 					margin-bottom: 32px;
-					
+
 					@media only screen and (min-width: 576px) {
-						width: 340px;
-						font-size: 20px;
-						line-height: 22px;
-						margin-bottom: 56px;
+						gap: 18px;
+						margin-bottom: 38px;
 					}
 
 					@media only screen and (min-width: 1200px) {
-						width: 526px;
-						font-size: 24px;
-						line-height: 26px;
-						margin-bottom: 68px;
+						gap: 24px;
+						margin-bottom: 48px;
 					}
 
-					span {
+					div {
+						height: 26px;
+						font: {
+							size: 15px;
+							weight: 700;
+						}
+						background: {
+							color: $verde-1;
+							size: 10px;
+							repeat: no-repeat;
+							position-x: 6px;
+							position-y: center;
+						}
+						padding: 1px 8px 0 20px;
+						border: 1px solid $cinza-1;
+
+						@media only screen and (min-width: 576px) {
+							height: 30px;
+							font-size: 18px;
+							background: {
+								size: 16px;
+								position-x: 11px;
+							}
+							padding: 1px 10px 0 34px;
+						}
+
+						@media only screen and (min-width: 1200px) {
+							height: 42px;
+							font-size: 24px;
+							background: {
+								size: 21px;
+								position-x: 17px;
+							}
+							padding: 3px 16px 0 46px;
+						}
+
 						&:nth-of-type(1) {
-							font-size: 21px;
-							line-height: 25px;
-							font-weight: 700;
-							background: $verde-2;
-							padding: 1px 4px;
-							@include texto-padding-linhas;
+							height: 28px;
+							font-size: 17px;
+							background: {
+								color: $verde-2;
+								image: url($pasta-imagens + "icones/icone-calendario.png");
+							}
 
 							@media only screen and (min-width: 576px) {
-								font-size: 24px;
-								line-height: 28px;
+								height: 34px;
+								font-size: 21px;
 							}
 
 							@media only screen and (min-width: 1200px) {
+								height: 47px;
 								font-size: 27px;
-								line-height: 31px;
 							}
 						}
 
 						&:nth-of-type(2) {
-							display: block;
-							padding-left: 4px;
-							margin-bottom: 14px;
-							font-weight: 700;
-
-							@media only screen and (min-width: 576px) {
-								margin-top: 14px;
-								margin-bottom: 20px;
-							}
+							background-image: url($pasta-imagens + "icones/icone-relogio.png");
 						}
 
-						&:nth-of-type(n + 3) {
-							display: block;
-							padding: 0;
-							margin: 8px 0 6px 6px;
+						&:nth-of-type(3) {
+							background-image: url($pasta-imagens + "icones/icone-estrela.png");
+						}
 
-							@media only screen and (min-width: 576px) {
-								margin-bottom: 16px;
-							}
+						&:nth-of-type(4) {
+							background-image: url($pasta-imagens + "icones/icone-camera.png");
+						}
+					}
+				}
 
-							@media only screen and (min-width: 576px) {
-								margin-bottom: 12px;
-							}
-							
-							&::before {
-								content: "»";
-								padding-right: 4px;
-								font-size: 12px;
-								font-weight: 700;
-								vertical-align: text-top;
+				.descricao {
+					width: 225px;
+					margin: {
+						left: 6px;
+						bottom: 32px;
+					}
+					
+					@media only screen and (min-width: 576px) {
+						width: 340px;
+						font-size: 18px;
+						line-height: 22px;
+						margin: {
+							left: 15px;
+							bottom: 56px;
+						}
+					}
 
-								@media only screen and (min-width: 576px) {
-									font-size: 18px;
-								}
-							}
+					@media only screen and (min-width: 1200px) {
+						width: 488px;
+						font-size: 24px;
+						line-height: 28px;
+						margin-bottom: 68px;
+					}
+
+					p {
+						font-weight: 700;
+
+						&:nth-of-type(3) {
+							margin-bottom: 0.7rem;
+						}
+					}
+
+					span {
+						display: block;
+						line-height: 22px;
+
+						@media only screen and (min-width: 576px) {
+							line-height: 28px;
+						}
+
+						@media only screen and (min-width: 1200px) {
+							line-height: 38px;
 						}
 					}
 				}
