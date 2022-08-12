@@ -757,6 +757,188 @@ h3.sectionname,
 			&[data-item="acesse-o-evento"] {}
 
 			&[data-item="programacao"] {
+				.descricao {
+					width: 252px;
+					margin-bottom: 34px;
+					
+					@media only screen and (min-width: 576px) {
+						width: 396px;
+						font-size: 16px;
+						margin-bottom: 56px;
+
+						p {
+							margin-bottom: 1.6rem;
+						}
+					}
+
+					@media only screen and (min-width: 1200px) {
+						width: 635px;
+						font-size: 20px;
+					}
+
+					.botao-cta {
+						margin-top: 20px;
+					}
+				}
+
+				.programacao {
+					margin-right: 16px;
+
+					@media only screen and (min-width: 576px) {
+						margin-right: 36px;
+					}
+
+					.mes {
+						font: {
+							size: 32px;
+							weight: 700;
+						}
+
+						margin-bottom: 16px;
+
+						@media only screen and (min-width: 576px) {
+							font-size: 55px;
+							margin-bottom: 32px;
+						}
+
+						@media only screen and (min-width: 1200px) {
+							font-size: 65px;
+						}
+					}
+
+					.grupo-mes {
+						display: flex;
+						flex-direction: column;
+						gap: 56px;
+
+						@media only screen and (min-width: 1200px) {
+							gap: 64px;
+						}
+
+						.grupo-data {
+							display: flex;
+							flex-direction: column;
+							gap: 32px;
+
+							@media only screen and (min-width: 576px) {
+								gap: 40px;
+							}
+
+							@media only screen and (min-width: 1200px) {
+								gap: 56px;
+							}
+
+							.data {
+								border-bottom: 1px solid $cinza-1;
+								font-weight: 700;
+
+								.dia {
+									font-size: 60px;
+
+									@media only screen and (min-width: 576px) {
+										font-size: 84px;
+									}
+
+									@media only screen and (min-width: 1200px) {
+										font-size: 88px;
+									}
+								}
+
+								.dia-semana {
+									font-size: 18px;
+
+									@media only screen and (min-width: 576px) {
+										font-size: 22px;
+									}
+
+									@media only screen and (min-width: 1200px) {
+										font-size: 25px;
+									}
+								}
+							}
+
+							.evento {
+								display: flex;
+								flex-direction: column;
+								gap: 10px;
+								background-color: #FFFFFF;
+								border: 1px solid $cinza-1;
+								padding: 16px 9px 16px 8px;
+								font-size: 15px;
+
+								@media only screen and (min-width: 576px) {
+									padding: 16px 13px 16px 21px;
+									font-size: 16px;
+									gap: 16px;
+								}
+
+								@media only screen and (min-width: 1200px) {
+									padding: 18px 27px 18px 35px;
+									font-size: 20px;
+									gap: 20px;
+								}
+
+								.horario {
+									font: {
+										size: 18px;
+										weight: 700;
+									}
+
+									@media only screen and (min-width: 576px) {
+										font-size: 22px;
+									}
+
+									@media only screen and (min-width: 1200px) {
+										font-size: 25px;
+									}
+								}
+
+								.assunto {
+									font: {
+										weight: 700;
+									}
+									line-height: 18px;
+
+									.modalidade {
+										font-style: italic;
+									}
+								}
+
+								.texto {
+									line-height: 18px;
+
+									@media only screen and (min-width: 576px) {
+										line-height: 20px;
+									}
+
+									@media only screen and (min-width: 1200px) {
+										line-height: 24px;
+									}
+
+									p {
+										// margin-bottom: 1.5rem;
+
+										&:last-child {
+											margin-bottom: 0;
+										}
+									}
+
+									.destaque-1 {
+										font-weight: 700;
+									}
+
+									.destaque-2 {
+										display: block;
+										font-size: 10px;
+										line-height: 13px;
+										margin-top: 2px;
+									}
+								}
+							}
+						}
+					}
+				}
+
 				.botao-cta {
 					display: block;
 					width: fit-content;
