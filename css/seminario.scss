@@ -6,6 +6,8 @@ $verde-2: #9FBA6F;
 $cinza-1: #222221;
 // $pasta-imagens: "https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/";
 $pasta-imagens: "../imagens/";
+$bg-conteudo: $pasta-imagens + "bg_conteudo.jpg";
+
 $pasta-logos: $pasta-imagens+"logos/";
 
 $familia-fonte: 'Helvetica';
@@ -411,7 +413,7 @@ h3.sectionname,
 			padding-bottom: 0;
 
 			background: {
-				image: url($pasta-imagens + "bg_conteudo.jpg");
+				image: url($bg-conteudo);
 				size: 546px;
 				repeat: no-repeat;
 				position: 96% -29px;
@@ -434,7 +436,7 @@ h3.sectionname,
 
 		&[data-item-ativo="boas-vindas"] {
 			background: {
-				image: url($pasta-imagens + "bg_conteudo.jpg");
+				image: url($bg-conteudo);
 				size: 600px;
 				repeat: no-repeat;
 				position: 50% 340px;
