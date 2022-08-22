@@ -34,6 +34,14 @@ function setPlayerYoutubeSize(event) {
 	}
 }
 
+function substituirTextoInnerHtml(elemento, txt_velho, txt_novo) {
+	elemento.innerHTML = elemento.innerHTML.replace(txt_velho, txt_novo);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+	substituirTextoInnerHtml(document.querySelector('#seminario-de-educacao-legislativa'), string_alvo, codigo_pasta_arquivos);
+});
+
 $(document).ready(() => {
 	const itens_menu = [
 		"Início",
@@ -94,7 +102,7 @@ $(document).ready(() => {
 				opacity: opacity_menu
 			}, 300, function() {
 				if(opacity_menu == 0) {
-					$(this).hide()
+					$(this).hide();
 				}
 			});
 
