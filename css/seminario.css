@@ -282,6 +282,27 @@ h3.sectionname,
     font-size: 27px;
   }
 }
+#seminario-de-educacao-legislativa .quebra-linha-bg {
+  padding: 1px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  background-color: #9FBA6F;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa .quebra-linha-bg {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa .quebra-linha-bg {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
 #seminario-de-educacao-legislativa #coluna-conteudo {
   position: relative;
   height: 100%;
@@ -339,6 +360,19 @@ h3.sectionname,
 @media only screen and (min-width: 992px) {
   #seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=boas-vindas] {
     background-position: 95% 330px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=certificado] {
+  padding-right: 16px;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=certificado] {
+    padding-right: 36px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=certificado] {
+    padding-right: 48px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo {
@@ -891,6 +925,201 @@ h3.sectionname,
 @media only screen and (min-width: 1200px) {
   #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(1), #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(2), #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .caixas .caixa:nth-of-type(3) {
     background-size: 201px 132px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 48px;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados {
+    margin-top: 68px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .linha-separadora-coluna {
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .linha-separadora-coluna {
+    display: block;
+    width: 2px;
+    height: auto;
+    background-color: #222221;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data {
+    gap: 40px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data:not(:last-child) {
+    width: 33.33%;
+    flex: 1;
+  }
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data:last-child {
+    width: 100%;
+    margin-top: 32px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .data {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #222221;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .data {
+    flex-direction: column;
+    border-bottom-width: 2px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .data {
+    border-bottom: 0;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .data .dia {
+  font-size: 60px;
+  line-height: 100%;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .data .dia {
+    font-size: 84px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .data .dia {
+    font-size: 88px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .data .dia-semana {
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .data .dia-semana {
+    font-size: 22px;
+    padding-bottom: 16px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .data .dia-semana {
+    font-size: 25px;
+    padding-bottom: 0;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados {
+    flex-direction: row;
+    gap: 64px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado {
+    gap: 24px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .periodo {
+  font-weight: 700;
+  line-height: 100%;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .periodo {
+    font-size: 24px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .descricao {
+  line-height: 100%;
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .descricao p {
+  margin: 0 0 20px 0;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .descricao p {
+    margin-bottom: 24px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .descricao p:last-child {
+  margin: 0;
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .botao-cta {
+  display: block;
+  color: #9FBA6F;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 15px;
+  line-height: 18px;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .botao-cta {
+    font-size: 20px;
+    line-height: 23px;
+    padding: 4px 4px 4px 8px;
+    height: 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .botao-cta {
+    font-size: 22px;
+    line-height: 25x;
+    padding: 4px 4px 4px 8px;
+    height: 31px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .botao-cta.preto {
+  color: #FFFFFF;
+  background-color: #222221;
+  font-size: 18px;
+  line-height: 20px;
+  height: 28px;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .botao-cta.preto {
+    font-size: 25px;
+    line-height: 27px;
+    height: 35px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .botao-cta.preto {
+    font-size: 28px;
+    line-height: 30px;
+    height: 38px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .logos {

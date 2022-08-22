@@ -387,6 +387,28 @@ h3.sectionname,
 		}
 	}
 
+	.quebra-linha-bg {
+		padding: 1px;
+		font: {
+			weight: 700;
+			size: 15px;
+		}
+		line-height: 20px;
+		background-color: $verde-2;
+
+		@include texto-padding-linhas;
+
+		@media only screen and (min-width: 576px) {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		@media only screen and (min-width: 1200px) {
+			font-size: 20px;
+			line-height: 27px;
+		}
+	}
+
 	#coluna-conteudo {
 		position: relative;
 		height: 100%;
@@ -458,6 +480,18 @@ h3.sectionname,
 
 		&[data-item-ativo="rede-do-legislativo"] {
 			
+		}
+
+		&[data-item-ativo="certificado"] {
+			padding-right: 16px;
+
+			@media only screen and (min-width: 576px) {
+				padding-right: 36px;
+			}
+
+			@media only screen and (min-width: 992px) {
+				padding-right: 48px;
+			}
 		}
 
 		.item-conteudo {
@@ -1056,7 +1090,199 @@ h3.sectionname,
 
 			}
 
-			&[data-item="certificado"] {}
+			&[data-item="certificado"] {
+				.certificados {
+					display: flex;
+					flex-direction: column;
+					gap: 40px;
+					margin-top: 48px;
+				
+					@media only screen and (min-width: 576px) {
+						margin-top: 68px;
+					}
+
+					@media only screen and (min-width: 992px) {
+						flex: {
+							direction: row;
+							wrap: wrap;
+						}
+						gap: 32px;
+					}
+
+					.linha-separadora-coluna {
+						display: none;
+
+						@media only screen and (min-width: 992px) {
+							display: block;
+							width: 2px;
+							height: auto;
+							background-color: $cinza-1;
+						}
+					}
+
+					.grupo-data {
+						display: flex;
+						flex-direction: column;
+						gap: 32px;
+						margin-bottom: 0;
+
+						@media only screen and (min-width: 576px) {
+							gap: 40px;
+						}
+
+						@media only screen and (min-width: 992px) {
+							&:not(:last-child) {
+								width: 33.33%;
+								flex: 1;
+							}
+
+							&:last-child {
+								width: 100%;
+								margin-top: 32px;
+							}
+						}
+
+						.data {
+							display: flex;
+							align-items: baseline;
+							flex-wrap: wrap;
+							border-bottom: 1px solid $cinza-1;
+							font-weight: 700;
+							margin-bottom: 0;
+							
+							@media only screen and (min-width: 576px) {
+								flex-direction: column;
+								border-bottom-width: 2px;
+							}
+
+							@media only screen and (min-width: 992px) {
+								border-bottom: 0;
+							}
+
+							.dia {
+								font-size: 60px;
+								line-height: 100%;
+
+								@media only screen and (min-width: 576px) {
+									font-size: 84px;
+								}
+
+								@media only screen and (min-width: 992px) {
+									font-size: 88px;
+								}
+							}
+
+							.dia-semana {
+								font-size: 18px;
+								padding-bottom: 8px;
+
+								@media only screen and (min-width: 576px) {
+									font-size: 22px;
+									padding-bottom: 16px;
+								}
+
+								@media only screen and (min-width: 992px) {
+									font-size: 25px;
+									padding-bottom: 0;
+								}
+							}
+						}
+
+						.lista-certificados {
+							display: flex;
+							flex-direction: column;
+							gap: 32px;
+
+							@media only screen and (min-width: 576px) {
+								flex-direction: row;
+								gap: 64px;
+							}
+
+							@media only screen and (min-width: 992px) {
+								flex-direction: column;
+								gap: 48px;
+							}
+
+							.certificado {
+								display: flex;
+								flex-direction: column;
+								gap: 20px;
+
+								@media only screen and (min-width: 576px) {
+									gap: 24px;
+								}
+
+								.periodo {
+									font-weight: 700;
+									line-height: 100%;
+
+									@media only screen and (min-width: 576px) {
+										font-size: 24px;
+									}
+								}
+
+								.descricao {
+									line-height: 100%;
+
+									p {
+										margin: 0 0 20px 0;
+
+										@media only screen and (min-width: 576px) {
+											margin-bottom: 24px;
+										}
+
+										&:last-child {
+											margin: 0;
+										}
+									}
+								}
+
+								.botao-cta {
+									display: block;
+									color: $verde-2;
+									width: fit-content;
+									font-size: 15px;
+									line-height: 18px;
+
+									@media only screen and (min-width: 576px) {
+										font-size: 20px;
+										line-height: 23px;
+										padding: 4px 4px 4px 8px;
+										height: 30px;
+									}
+
+									@media only screen and (min-width: 992px) {
+										font-size: 22px;
+										line-height: 25x;
+										padding: 4px 4px 4px 8px;
+										height: 31px;
+									}
+
+									&.preto {
+										color: #FFFFFF;
+										background-color: $cinza-1;
+										font-size: 18px;
+										line-height: 20px;
+										height: 28px;
+
+										@media only screen and (min-width: 576px) {
+											font-size: 25px;
+											line-height: 27px;
+											height: 35px;
+										}
+
+										@media only screen and (min-width: 992px) {
+											font-size: 28px;
+											line-height: 30px;
+											height: 38px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 
 			&[data-item="gravacoes"] {}
 

@@ -50,7 +50,7 @@ $(document).ready(() => {
 		// "Acesse o evento",
 		"Programação",
 		"Rede do Legislativo",
-		// "Certificado",
+		"Certificado",
 		// "Gravações"
 	];
 
