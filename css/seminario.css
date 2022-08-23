@@ -610,17 +610,16 @@ h3.sectionname,
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao p:nth-of-type(3) {
   margin-bottom: 0.7rem;
 }
-#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao span {
-  display: block;
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao ol {
   line-height: 22px;
 }
 @media only screen and (min-width: 576px) {
-  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao span {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao ol {
     line-height: 28px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao span {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=inicio] .descricao ol {
     line-height: 38px;
   }
 }
