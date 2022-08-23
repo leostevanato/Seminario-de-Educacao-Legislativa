@@ -308,6 +308,7 @@ h3.sectionname,
   font-weight: 700;
   background-color: #9FBA6F;
   padding: 0 2px;
+  cursor: pointer;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }

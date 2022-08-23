@@ -412,6 +412,7 @@ h3.sectionname,
     	font-weight: 700;
     	background-color: $verde-2;
     	padding: 0 2px;
+		cursor: pointer;
 
 		@include texto-padding-linhas;
 	}
