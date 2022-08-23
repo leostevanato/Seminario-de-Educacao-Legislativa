@@ -38,6 +38,27 @@ function substituirTextoInnerHtml(elemento, txt_velho, txt_novo) {
 	elemento.innerHTML = elemento.innerHTML.replace(txt_velho, txt_novo);
 }
 
+function elementoClick(element) {
+	element.addEventListener("click", function (event) {
+		if (element.getAttribute("data-alvo") != null) {
+			let elemento;
+
+			if (document.querySelector('.item-menu[data-item="' + element.getAttribute("data-alvo") + '"]')) {
+				elemento = document.querySelector('.item-menu[data-item="' + element.getAttribute("data-alvo") + '"]');
+			}
+			
+			if (typeof elemento !== 'undefined') {
+				setItemMenuAtivo(elemento);
+			}
+		}
+		
+		if (element.getAttribute("data-link") != null) {
+			window.open(element.getAttribute("data-link"));
+			return false;
+		}
+	});
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 	substituirTextoInnerHtml(document.querySelector('#seminario-de-educacao-legislativa'), string_alvo, codigo_pasta_arquivos);
 });
@@ -226,27 +247,15 @@ $(document).ready(() => {
 		menuLateral.dispatchEvent(trocarMenu);
 	}, false);
 
+	var linkDentroTextoList = document.querySelectorAll(".link-dentro-texto");
 	var botaoCtaList = document.querySelectorAll(".botao-cta");
 
+	linkDentroTextoList.forEach((elemento) => {
+		elementoClick(elemento);
+	});
+
 	botaoCtaList.forEach((element) => {
-		element.addEventListener("click", function (event) {
-			if (element.getAttribute("data-alvo") != null) {
-				let elemento;
-	
-				if (document.querySelector('.item-menu[data-item="' + element.getAttribute("data-alvo") + '"]')) {
-					elemento = document.querySelector('.item-menu[data-item="' + element.getAttribute("data-alvo") + '"]');
-				}
-				
-				if (typeof elemento !== 'undefined') {
-					setItemMenuAtivo(elemento);
-				}
-			}
-			
-			if (element.getAttribute("data-link") != null) {
-				window.open(element.getAttribute("data-link"));
-				return false;
-			}
-		});
+		elementoClick(element);
 	});
 	
 	var caixas = document.querySelectorAll(".caixa");
