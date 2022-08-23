@@ -486,8 +486,16 @@ h3.sectionname,
 			}
 		}
 
-		&[data-item-ativo="rede-do-legislativo"] {
+		&[data-item-ativo="acesse-o-evento"] {
+			padding-right: 16px;
 			
+			@media only screen and (min-width: 576px) {
+				padding-right: 36px;
+			}
+
+			@media only screen and (min-width: 992px) {
+				padding-right: 48px;
+			}
 		}
 
 		&[data-item-ativo="certificado"] {
@@ -553,7 +561,7 @@ h3.sectionname,
 					margin-bottom: 34px;
 				}
 
-				@media only screen and (min-width: 1200px) {
+				@media only screen and (min-width: 992px) {
 					font-size: 80px;
 					letter-spacing: normal;
 				}
@@ -567,11 +575,12 @@ h3.sectionname,
 
 				@media only screen and (min-width: 576px) {
 					font-size: 16px;
+					line-height: 19px;
 				}
 				
-				@media only screen and (min-width: 1200px) {
+				@media only screen and (min-width: 992px) {
 					font-size: 20px;
-					line-height: 22px;
+					line-height: 23px;
 				}
 			}
 
@@ -827,7 +836,214 @@ h3.sectionname,
 				}
 			}
 
-			&[data-item="acesse-o-evento"] {}
+			&[data-item="acesse-o-evento"] {
+				.descricao {
+					margin-bottom: 32px;
+					
+					@media only screen and (min-width: 992px) {
+						margin-bottom: 32px;
+					}
+				}
+
+				.eventos {
+					margin-right: 16px;
+
+					@media only screen and (min-width: 576px) {
+						margin-right: 36px;
+					}
+
+					.mes {
+						font: {
+							size: 32px;
+							weight: 700;
+						}
+
+						@media only screen and (min-width: 576px) {
+							font-size: 55px;
+							margin-bottom: 1rem;
+						}
+
+						@media only screen and (min-width: 992px) {
+							font-size: 65px;
+							margin-bottom: 2.5rem;
+						}
+					}
+
+					.linha-separadora-coluna {
+						display: none;
+
+						@media only screen and (min-width: 992px) {
+							display: block;
+							width: 2px;
+							height: auto;
+							background-color: $cinza-1;
+						}
+					}
+
+					.grupo-mes {
+						display: flex;
+						flex-direction: column;
+						gap: 2rem;
+
+						@media only screen and (min-width: 992px) {
+							gap: 80px;
+						}
+
+						.grupo-data {
+							display: flex;
+							flex-direction: column;
+							gap: 32px;
+
+							@media only screen and (min-width: 576px) {
+								gap: 40px;
+							}
+
+							@media only screen and (min-width: 992px) {
+								flex-direction: row;
+							}
+
+							.data {
+								display: flex;
+								align-items: baseline;
+								flex-wrap: wrap;
+								border-bottom: 1px solid $cinza-1;
+								font-weight: 700;
+								margin-bottom: 0;
+								
+								@media only screen and (min-width: 576px) {
+									border-bottom-width: 2px;
+								}
+	
+								@media only screen and (min-width: 992px) {
+									flex-direction: column;
+									border-bottom: 0;
+								}
+	
+								.dia {
+									font-size: 60px;
+									line-height: 100%;
+	
+									@media only screen and (min-width: 576px) {
+										font-size: 84px;
+									}
+	
+									@media only screen and (min-width: 992px) {
+										font-size: 88px;
+									}
+								}
+	
+								.dia-semana {
+									font-size: 18px;
+									padding-bottom: 8px;
+	
+									@media only screen and (min-width: 576px) {
+										font-size: 22px;
+										padding-bottom: 16px;
+									}
+	
+									@media only screen and (min-width: 992px) {
+										font-size: 25px;
+										padding-bottom: 0;
+									}
+								}
+							}
+
+							.periodos {
+								display: flex;
+								flex-direction: column;
+								gap: 1.5rem;
+
+								.periodo {
+									display: flex;
+									flex-direction: column;
+									gap: 1rem;
+
+									@media only screen and (min-width: 576px) {
+										gap: 16px;
+									}
+
+									@media only screen and (min-width: 992px) {
+										gap: 20px;
+										margin-top: 1rem;
+									}
+
+									h5 {
+										margin-bottom: 0;
+
+										font: {
+											size: 21px;
+											weight: 700;
+										}
+
+										@media only screen and (min-width: 576px) {
+											font-size: 24px;
+										}
+
+										@media only screen and (min-width: 992px) {
+											font-size: 27px;
+										}
+									}
+
+									.botao-cta {
+										display: block;
+										color: $verde-2;
+										font-size: 15px;
+										line-height: 18px;
+	
+										@media only screen and (min-width: 576px) {
+											font-size: 20px;
+											line-height: 23px;
+											padding: 4px 4px 4px 8px;
+											height: 30px;
+										}
+	
+										@media only screen and (min-width: 992px) {
+											font-size: 22px;
+											line-height: 25px;
+											padding: 6px 10px 8px 10px;
+											height: 36px;
+										}
+									}
+
+									.evento {
+										p {
+											&:nth-of-type(1) {
+												font-size: 17px;
+												line-height: 20px;
+
+												@media only screen and (min-width: 576px) {
+													font-size: 21px;
+													line-height: 24px;
+												}
+
+												@media only screen and (min-width: 576px) {
+													font-size: 23px;
+													line-height: 26px;
+												}
+											}
+
+											&:nth-of-type(2) {
+												font-size: 14px;
+												line-height: 17px;
+
+												@media only screen and (min-width: 576px) {
+													font-size: 16px;
+													line-height: 19px;
+												}
+
+												@media only screen and (min-width: 576px) {
+													font-size: 20px;
+													line-height: 23px;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 
 			&[data-item="programacao"] {
 				.descricao {
@@ -1288,7 +1504,7 @@ h3.sectionname,
 
 									@media only screen and (min-width: 992px) {
 										font-size: 22px;
-										line-height: 25x;
+										line-height: 25px;
 										padding: 4px 4px 4px 8px;
 										height: 31px;
 									}

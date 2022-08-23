@@ -68,7 +68,7 @@ $(document).ready(() => {
 		"Início",
 		"Sobre o evento",
 		"Boas-vindas",
-		// "Acesse o evento",
+		"Acesse o evento",
 		"Programação",
 		"Rede do Legislativo",
 		"Certificado",
@@ -277,4 +277,6 @@ $(document).ready(() => {
 
 		setPlayerYoutubeSize(player1);
 	});
+
+	// setItemMenuAtivo(document.querySelector('.item-conteudo[data-item="acesse-o-evento"]'));
 });
