@@ -364,7 +364,7 @@ h3.sectionname,
 
 	.botao-cta {
 		display: none;
-		width: 106px;
+		width: fit-content;
 		height: 26px;
 		padding: 4px 6px 4px 8px;
 		font-size: 18px;
@@ -374,14 +374,12 @@ h3.sectionname,
 		cursor: pointer;
 
 		@media only screen and (min-width: 576px) {
-			width: 143px;
 			height: 39px;
 			padding: 8px 10px 8px 16px;
 			font-size: 23px;
 		}
 
 		@media only screen and (min-width: 1200px) {
-			width: 163px;
 			height: 43px;
 			font-size: 27px;
 		}
@@ -407,6 +405,15 @@ h3.sectionname,
 			font-size: 20px;
 			line-height: 27px;
 		}
+	}
+
+	.link-dentro-texto {
+		color: #FFFFFF;
+    	font-weight: 700;
+    	background-color: $verde-2;
+    	padding: 0 2px;
+
+		@include texto-padding-linhas;
 	}
 
 	#coluna-conteudo {
@@ -491,6 +498,35 @@ h3.sectionname,
 
 			@media only screen and (min-width: 992px) {
 				padding-right: 48px;
+			}
+		}
+
+		&[data-item-ativo="gravacoes"] {
+			padding-right: 16px;
+
+			background: {
+				image: url($bg-conteudo);
+				size: 600px;
+				repeat: no-repeat;
+				position: 50% 400px;
+			}
+
+			@media only screen and (min-width: 576px) {
+				padding-right: 36px;
+
+				background: {
+					size: 850px;
+					position: 85% 350px;
+				}
+			}
+
+			@media only screen and (min-width: 992px) {
+				padding-right: 48px;
+
+				background: {
+					size: 1150px;
+					position: 95% 340px;
+				}
 			}
 		}
 
@@ -977,7 +1013,6 @@ h3.sectionname,
 
 				.botao-cta {
 					display: block;
-					width: fit-content;
 				}
 			}
 
@@ -1240,7 +1275,6 @@ h3.sectionname,
 								.botao-cta {
 									display: block;
 									color: $verde-2;
-									width: fit-content;
 									font-size: 15px;
 									line-height: 18px;
 
@@ -1284,7 +1318,49 @@ h3.sectionname,
 				}
 			}
 
-			&[data-item="gravacoes"] {}
+			&[data-item="gravacoes"] {
+				img {
+					display: block;
+					width: 241px;
+					margin: {
+						top: 40px;
+						bottom: 32px;
+						left: auto;
+						right: auto;
+					}
+
+					@media only screen and (min-width: 576px) {
+						width: 397px;
+						margin: {
+							top: 56px;
+							bottom: 40px;
+						}
+					}
+
+					@media only screen and (min-width: 992px) {
+						width: 687px;
+						margin-bottom: 56px;
+					}
+				}
+
+				.botao-cta {
+					display: block;
+					font-size: 15px;
+					line-height: 18px;
+					margin: 0 auto;
+
+					@media only screen and (min-width: 576px) {
+						font-size: 18px;
+						line-height: 21px;
+					}
+					
+					@media only screen and (min-width: 992px) {
+						font-size: 30px;
+						line-height: 33px;
+						height: 50px;
+					}
+				}
+			}
 
 		}
 

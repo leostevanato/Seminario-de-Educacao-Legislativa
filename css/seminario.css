@@ -258,7 +258,9 @@ h3.sectionname,
 }
 #seminario-de-educacao-legislativa .botao-cta {
   display: none;
-  width: 106px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 26px;
   padding: 4px 6px 4px 8px;
   font-size: 18px;
@@ -269,7 +271,6 @@ h3.sectionname,
 }
 @media only screen and (min-width: 576px) {
   #seminario-de-educacao-legislativa .botao-cta {
-    width: 143px;
     height: 39px;
     padding: 8px 10px 8px 16px;
     font-size: 23px;
@@ -277,7 +278,6 @@ h3.sectionname,
 }
 @media only screen and (min-width: 1200px) {
   #seminario-de-educacao-legislativa .botao-cta {
-    width: 163px;
     height: 43px;
     font-size: 27px;
   }
@@ -302,6 +302,14 @@ h3.sectionname,
     font-size: 20px;
     line-height: 27px;
   }
+}
+#seminario-de-educacao-legislativa .link-dentro-texto {
+  color: #FFFFFF;
+  font-weight: 700;
+  background-color: #9FBA6F;
+  padding: 0 2px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 #seminario-de-educacao-legislativa #coluna-conteudo {
   position: relative;
@@ -373,6 +381,27 @@ h3.sectionname,
 @media only screen and (min-width: 992px) {
   #seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=certificado] {
     padding-right: 48px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=gravacoes] {
+  padding-right: 16px;
+  background-image: url("../imagens/bg_conteudo.jpg");
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 50% 400px;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=gravacoes] {
+    padding-right: 36px;
+    background-size: 850px;
+    background-position: 85% 350px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo[data-item-ativo=gravacoes] {
+    padding-right: 48px;
+    background-size: 1150px;
+    background-position: 95% 340px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo {
@@ -823,9 +852,6 @@ h3.sectionname,
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=programacao] .botao-cta {
   display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=rede-do-legislativo] .titulo {
   width: 240px;
@@ -1079,9 +1105,6 @@ h3.sectionname,
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=certificado] .certificados .grupo-data .lista-certificados .certificado .botao-cta {
   display: block;
   color: #9FBA6F;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   font-size: 15px;
   line-height: 18px;
 }
@@ -1120,6 +1143,46 @@ h3.sectionname,
     font-size: 28px;
     line-height: 30px;
     height: 38px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=gravacoes] img {
+  display: block;
+  width: 241px;
+  margin-top: 40px;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=gravacoes] img {
+    width: 397px;
+    margin-top: 56px;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=gravacoes] img {
+    width: 687px;
+    margin-bottom: 56px;
+  }
+}
+#seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=gravacoes] .botao-cta {
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=gravacoes] .botao-cta {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=gravacoes] .botao-cta {
+    font-size: 30px;
+    line-height: 33px;
+    height: 50px;
   }
 }
 #seminario-de-educacao-legislativa #coluna-conteudo .logos {

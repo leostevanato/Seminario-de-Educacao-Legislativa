@@ -51,7 +51,7 @@ $(document).ready(() => {
 		"Programação",
 		"Rede do Legislativo",
 		"Certificado",
-		// "Gravações"
+		"Gravações"
 	];
 
 	const slugify = str =>
