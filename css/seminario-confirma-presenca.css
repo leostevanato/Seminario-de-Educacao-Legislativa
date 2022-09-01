@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* INÍCIO - Layout moodle */
+.path-mod-page {
+  /* Esconder elementos padrão do Moodle acima do menu */
+  /* Esconder Borda Padrão do Moodle da área do conteúdo */
+  /* Fundo área de navegação */
+  /* FIM - Layout moodle */
+}
+.path-mod-page .pagelayout-course .headerbkg {
+  display: none;
+}
+.path-mod-page .pagelayout-course div#learningcontent {
+  margin-top: 0 !important;
+}
+.path-mod-page div#page-content,
+.path-mod-page #region-main-box,
+.path-mod-page #region-main {
+  padding: 0;
+}
+.path-mod-page #region-main {
+  overflow-x: visible;
+}
+.path-mod-page #region-main div[role=main] > h2 {
+  display: none;
+}
+.path-mod-page #region-main div[role=main] > .modified {
+  display: none;
+}
+.path-mod-page #page-header > div > div > div > div > div.mr-auto,
+.path-mod-page #page-header > div > div > div > div.d-flex.flex-wrap,
+.path-mod-page h3.sectionname,
+.path-mod-page #completionprogressid {
+  display: none;
+}
+.path-mod-page .course-content ul.topics li.section,
+.path-mod-page .course-content ul.weeks li.section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.path-mod-page .course-content ul.topics li.section .content {
+  border: 0;
+}
+.path-mod-page #section-0 > div.content > div.summary {
+  background-color: #ffffff;
+  padding: 0;
+}
+.path-mod-page .editing .course-content ul.topics li.section .left, .path-mod-page .editing .course-content ul.topics li.section .right {
+  padding: 0;
+}
+.path-mod-page .botao-cta {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 6px 4px 8px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 100%;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+@media only screen and (min-width: 576px) {
+  .path-mod-page .botao-cta {
+    padding: 8px 10px 8px 16px;
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .path-mod-page .botao-cta {
+    font-size: 30px;
+  }
+}
+.path-mod-page #seminario-de-educacao-legislativa-confirma-presenca {
+  font-family: "Helvetica";
+  color: #222221;
+  background-image: url("../imagens/bg_conteudo.jpg");
+  background-color: #BFDA90;
+  background-size: 585px;
+  background-repeat: no-repeat;
+  background-position: -22px -296px;
+}
+@media only screen and (min-width: 576px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca {
+    background-size: 885px;
+    background-position: right -338px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca {
+    background-size: 1100px;
+    background-position: right -315px;
+  }
+}
+.path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid {
+  display: flex;
+  flex-direction: column;
+  min-height: 469px;
+  margin: 0 auto;
+  padding: 56px 15px 56px 32px;
+}
+@media only screen and (min-width: 576px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid {
+    padding: 56px 72px 56px 116px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid {
+    padding: 56px 72px 56px 140px;
+  }
+}
+.path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .titulo {
+  width: 170px;
+  padding: 0 2px 2px 2px;
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 400;
+  background-color: #BFDA90;
+}
+@media only screen and (min-width: 768px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .titulo {
+    width: 305px;
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 32px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .titulo {
+    width: 410px;
+    font-size: 24px;
+    margin-bottom: 56px;
+  }
+}
+.path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .titulo span {
+  font-size: 25px;
+  font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .titulo span {
+    font-size: 39px;
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .titulo span {
+    font-size: 51px;
+  }
+}
+.path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .conteudo {
+  width: 320px;
+  background-color: #BFDA90;
+}
+@media only screen and (min-width: 768px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .conteudo {
+    width: 530px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .conteudo {
+    width: 630px;
+  }
+}
+.path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .conteudo p:nth-of-type(1) {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 100%;
+  letter-spacing: -0.015em;
+  color: #9FBA6F;
+  margin-bottom: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .conteudo p:nth-of-type(1) {
+    font-size: 70px;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .conteudo p:nth-of-type(1) {
+    font-size: 80px;
+    margin-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .conteudo p:nth-of-type(2) {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .path-mod-page #seminario-de-educacao-legislativa-confirma-presenca.container-fluid .conteudo p:nth-of-type(2) {
+    font-size: 20px;
+  }
+}

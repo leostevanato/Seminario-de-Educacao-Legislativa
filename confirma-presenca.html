@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="https://www.educacaoadistancia.camara.leg.br/ead_cfd/theme/styles.php/fordson/1656693595_1/all" />
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+	<script type="text/javascript" src="https://www.educacaoadistancia.camara.leg.br/ead_cfd/theme/jquery.php/core/jquery-3.2.1.min.js"></script>
+
+	<script>
+		/*
+		Explicação da regex /@codigoPastaArquivos@\//gi
+		string_alvo = Regex no formato /string/gi
+		
+		Inicia com uma / seguido da string @codigoPastaArquivos@ e termina com /gi.
+		O g indica que queremos procurar todas as ocorrências da string e o i diz que é case sensitive.
+		*/
+		// var string_alvo = /@codigoPastaArquivos@/gi;
+		var string_alvo = /https:\/\/www.educacaoadistancia.camara.leg.br\/ead_cfd\/pluginfile.php\/@codigoPastaArquivos@\/mod_folder\/content\/0\//gi;
+		var codigo_pasta_arquivos = "";
+	</script>
+
+</head>
+<body>
+	<p style="display: none;">
+		<link rel="stylesheet" href="css/seminario-confirma-presenca.css?forcedownload=1" />
+		<script src="js/seminario-confirma-presenca.js?forcedownload=1" type="text/javascript"></script>
+	</p>
+
+	<!-- <div id="seminario-de-educacao-legislativa-confirma-presenca" class="container-fluid" style="display: none;">
+		<h2 class="titulo">
+			Seminário<br>
+			<span>EDUCAÇÃO LEGISLATIVA</span><br>
+			e XII Jornada de Pesquisa e	Extensão da Câmara dos Deputados
+		</h2>
+
+		<div class="conteudo">
+			<p>sua presença nesse evento está confirmada</p>
+			
+			<p>Clique abaixo para assistir à transmissão:</p>
+
+			<div class="botao-cta" data-link="#" tabindex="0" role="button">Assista »</div>
+		</div>
+	</div> -->
+
+	<div class="alvo"></div>
+
+</body>
+</html>

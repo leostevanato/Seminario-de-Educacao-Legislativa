@@ -1,0 +1,224 @@
+$bootstrap-breakpoint: "-fluid";
+$verde-1: #BFDA90;
+$verde-2: #9FBA6F;
+$cinza-1: #222221;
+// $pasta-imagens: "https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/275804/mod_folder/content/0/imagens/";
+$pasta-imagens: "../imagens/";
+$bg-conteudo: $pasta-imagens + "bg_conteudo.jpg";
+
+$pasta-logos: $pasta-imagens+"logos/";
+
+$familia-fonte: 'Helvetica';
+
+/* INÍCIO - Layout moodle */
+
+.path-mod-page {
+	.pagelayout-course .headerbkg {
+		display: none;
+	}
+
+	.pagelayout-course div#learningcontent {
+		margin-top: 0 !important;
+	}
+
+	div#page-content,
+	#region-main-box,
+	#region-main {
+		// @media only screen and (max-width: 1200px) {
+			padding: 0;
+		// }
+	}
+
+	#region-main {
+		overflow-x: visible;
+
+		div[role="main"] {
+			> h2 {
+				display: none;
+			}
+
+			> .modified {
+				display: none;
+			}
+		}
+	}
+
+	/* Esconder elementos padrão do Moodle acima do menu */
+	//#page-navbar > nav > ul, // Caminho de pão
+	#page-header > div > div > div > div >div.mr-auto,
+	#page-header > div > div > div > div.d-flex.flex-wrap,
+	h3.sectionname,
+	#completionprogressid {
+		display: none;
+	}
+
+	.course-content ul.topics li.section,
+	.course-content ul.weeks li.section {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	/* Esconder Borda Padrão do Moodle da área do conteúdo */
+	.course-content ul.topics li.section .content {
+		border: 0;
+	}
+
+	/* Fundo área de navegação */
+	#section-0 > div.content > div.summary {
+		background-color: #ffffff;
+		padding: 0;
+		// max-width: 1440px;
+	}
+
+	.editing .course-content ul.topics li.section .left, .editing .course-content ul.topics li.section .right {
+		padding: 0;
+	}
+
+	/* FIM - Layout moodle */
+
+	.botao-cta {
+		width: fit-content;
+		padding: 4px 6px 4px 8px;
+		font-size: 15px;
+		font-weight: 700;
+		line-height: 100%;
+		background: #FFFFFF;
+		cursor: pointer;
+
+		@media only screen and (min-width: 576px) {
+			padding: 8px 10px 8px 16px;
+			font-size: 18px;
+		}
+
+		@media only screen and (min-width: 1200px) {
+			font-size: 30px;
+		}
+	}
+
+	#seminario-de-educacao-legislativa-confirma-presenca {
+		font-family: $familia-fonte;
+		color: $cinza-1;
+
+		background: {
+			image: url($bg-conteudo);
+			color: $verde-1;
+			size: 585px;
+			repeat: no-repeat;
+			position: -22px -296px;
+		}
+
+		@media only screen and (min-width: 576px) {
+			background: {
+				size: 885px;
+				position: right -338px;
+			}
+		}
+
+		@media only screen and (min-width: 1200px) {
+			background: {
+				size: 1100px;
+				position: right -315px;
+			}
+		}
+
+		&.container#{$bootstrap-breakpoint} {
+			display: flex;
+			flex-direction: column;
+			min-height: 469px;
+			margin: 0 auto;
+			padding: 56px 15px 56px 32px;
+
+			@media only screen and (min-width: 576px) {
+				padding: 56px 72px 56px 116px;
+			}
+
+			@media only screen and (min-width: 1200px) {
+				padding: 56px 72px 56px 140px;
+			}
+
+			.titulo {
+				width: 170px;
+				padding: 0 2px 2px 2px;
+				margin-bottom: 24px;
+				font-size: 15px;
+				line-height: 1.1;
+				font-weight: 400;
+				background-color: $verde-1;
+
+				@media only screen and (min-width: 768px) {
+					width: 305px;
+					font-size: 18px;
+					line-height: 1.3;
+					margin-bottom: 32px;
+				}
+
+				@media only screen and (min-width: 1200px) {
+					width: 410px;
+					font-size: 24px;
+					margin-bottom: 56px;
+				}
+
+				span {
+					font-size: 25px;
+					font-weight: 700;
+
+					@media only screen and (min-width: 768px) {
+						font-size: 39px;
+						line-height: 1.1;
+					}
+					
+					@media only screen and (min-width: 1200px) {
+						font-size: 51px;
+					}
+				}
+			}
+
+			.conteudo {
+				width: 320px;
+				background-color: $verde-1;
+
+				@media only screen and (min-width: 768px) {
+					width: 530px;
+				}
+
+				@media only screen and (min-width: 1200px) {
+					width: 630px;
+				}
+
+				p {
+					&:nth-of-type(1) {
+						font: {
+							weight: 700;
+							size: 42px;
+						}
+						line-height: 100%;
+						letter-spacing: -0.015em;
+						color: $verde-2;
+						margin-bottom: 32px;
+
+						@media only screen and (min-width: 768px) {
+							font-size: 70px;
+							margin-bottom: 40px;
+						}
+
+						@media only screen and (min-width: 1200px) {
+							font-size: 80px;
+							margin-bottom: 48px;
+						}
+					}
+
+					&:nth-of-type(2) {
+						@media only screen and (min-width: 576px) {
+							font-size: 16px;
+							margin-bottom: 24px;
+						}
+
+						@media only screen and (min-width: 1200px) {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}	
+	}
+}
