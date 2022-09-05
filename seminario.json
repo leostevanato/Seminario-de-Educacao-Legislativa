@@ -6,36 +6,42 @@
 		{
 			"data": "21.09",
 			"periodo": "manhã",
+			"idPaginaConfirmaPresenca": 15735,
 			"idPaginaCertificado": 16003,
 			"idYoutube": "CH-883eJkFs"
 		},
 		{
 			"data": "21.09",
 			"periodo": "tarde",
+			"idPaginaConfirmaPresenca": 15736,
 			"idPaginaCertificado": 16004,
 			"idYoutube": "gSw496udnGU"
 		},
 		{
 			"data": "22.09",
 			"periodo": "manhã",
+			"idPaginaConfirmaPresenca": 15738,
 			"idPaginaCertificado": 16005,
 			"idYoutube": "vY2Pq3L6Rfk"
 		},
 		{
 			"data": "22.09",
 			"periodo": "tarde",
+			"idPaginaConfirmaPresenca": 15739,
 			"idPaginaCertificado": 16006,
 			"idYoutube": "XcFvpHQi8P8"
 		},
 		{
 			"data": "23.09",
 			"periodo": "manhã",
+			"idPaginaConfirmaPresenca": 15742,
 			"idPaginaCertificado": 16011,
 			"idYoutube": "135a1ghmwmI"
 		},
 		{
 			"data": "23.09",
 			"periodo": "tarde",
+			"idPaginaConfirmaPresenca": 15743,
 			"idPaginaCertificado": 16012,
 			"idYoutube": "9XXRWPu355w"
 		}

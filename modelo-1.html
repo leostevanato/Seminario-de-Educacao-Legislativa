@@ -22,6 +22,10 @@
 		// var string_alvo = /@codigoPastaArquivos@/gi;
 		var string_alvo = /https:\/\/www.educacaoadistancia.camara.leg.br\/ead_cfd\/pluginfile.php\/@codigoPastaArquivos@\/mod_folder\/content\/0\//gi;
 		var codigo_pasta_arquivos = "";
+		var url_mdl_arquivos = "";
+		var urlPaginaConfirmaPresenca = "page/view.php?id=";
+		var urlPaginaCertificado = "simplecertificate/view.php?id=";
+		var urlVideoYouTube = "https://www.youtube.com/watch?v=";
 	</script>
 
 </head>
@@ -120,14 +124,14 @@
 				<div class="eventos">
 					<h3 class="mes">setembro</h3>
 					
-					<div class="grupo-mes">
-						<div class="grupo-data">
+					<div class="grupo-mes" data-mes="09">
+						<div class="grupo-data" data-dia="21">
 							<h4 class="data"><span class="dia">21</span><span class="dia-semana">_quarta</span></h4>
 	
 							<div class="linha-separadora-coluna"></div>
 
 							<div class="periodos">
-								<div class="periodo">
+								<div class="periodo" data-periodo="manhã">
 									<h5>manhã</h5>
 									
 									<div class="botao-cta" data-link="#" tabindex="0" role="button">Acesse »</div>
@@ -139,7 +143,7 @@
 									</div>
 								</div>
 	
-								<div class="periodo">
+								<div class="periodo" data-periodo="tarde">
 									<h5>tarde</h5>
 									
 									<div class="botao-cta" data-link="#" tabindex="0" role="button">Acesse »</div>
@@ -159,13 +163,13 @@
 							</div>
 						</div>
 	
-						<div class="grupo-data">
+						<div class="grupo-data" data-dia="22">
 							<h4 class="data"><span class="dia">22</span><span class="dia-semana">_quinta</span></h4>
 	
 							<div class="linha-separadora-coluna"></div>
 
 							<div class="periodos">
-								<div class="periodo">
+								<div class="periodo" data-periodo="manhã">
 									<h5>manhã</h5>
 									
 									<div class="botao-cta" data-link="#" tabindex="0" role="button">Acesse »</div>
@@ -183,7 +187,7 @@
 									</div>
 								</div>
 	
-								<div class="periodo">
+								<div class="periodo" data-periodo="tarde">
 									<h5>tarde</h5>
 									
 									<div class="botao-cta" data-link="#" tabindex="0" role="button">Acesse »</div>
@@ -203,13 +207,13 @@
 							</div>
 						</div>
 
-						<div class="grupo-data">
+						<div class="grupo-data" data-dia="23">
 							<h4 class="data"><span class="dia">23</span><span class="dia-semana">_sexta</span></h4>
 
 							<div class="linha-separadora-coluna"></div>
 	
 							<div class="periodos">
-								<div class="periodo">
+								<div class="periodo" data-periodo="manhã">
 									<h5>manhã</h5>
 									
 									<div class="botao-cta" data-link="#" tabindex="0" role="button">Acesse »</div>
@@ -227,7 +231,7 @@
 									</div>
 								</div>
 	
-								<div class="periodo">
+								<div class="periodo" data-periodo="tarde">
 									<h5>tarde</h5>
 									
 									<div class="botao-cta" data-link="#" tabindex="0" role="button">Acesse »</div>
@@ -684,11 +688,11 @@
 				</div>
 
 				<div class="certificados">
-					<div class="grupo-data">
+					<div class="grupo-data" data-dia="21">
 						<h4 class="data"><span class="dia">21</span><span class="dia-semana">_quarta</span></h4>
 
 						<div class="lista-certificados">
-							<div class="certificado">
+							<div class="certificado" data-periodo="manhã">
 								<div class="periodo">Certificado da manhã</div>
 								
 								<div class="descricao">
@@ -698,7 +702,7 @@
 								<div class="botao-cta" data-link="#" tabindex="0" role="button">Gerar »</div>
 							</div>
 
-							<div class="certificado">
+							<div class="certificado" data-periodo="tarde">
 								<div class="periodo">Certificado da tarde</div>
 								
 								<div class="descricao">
@@ -713,11 +717,11 @@
 
 					<div class="linha-separadora-coluna"></div>
 
-					<div class="grupo-data">
+					<div class="grupo-data" data-dia="22">
 						<h4 class="data"><span class="dia">22</span><span class="dia-semana">_quinta</span></h4>
 
 						<div class="lista-certificados">
-							<div class="certificado">
+							<div class="certificado" data-periodo="manhã">
 								<div class="periodo">Certificado da manhã</div>
 								
 								<div class="descricao">
@@ -728,7 +732,7 @@
 								<div class="botao-cta" data-link="#" tabindex="0" role="button">Gerar »</div>
 							</div>
 
-							<div class="certificado">
+							<div class="certificado" data-periodo="tarde">
 								<div class="periodo">Certificado da tarde</div>
 								
 								<div class="descricao">
@@ -743,11 +747,11 @@
 
 					<div class="linha-separadora-coluna"></div>
 					
-					<div class="grupo-data">
+					<div class="grupo-data" data-dia="23">
 						<h4 class="data"><span class="dia">23</span><span class="dia-semana">_sexta</span></h4>
 
 						<div class="lista-certificados">
-							<div class="certificado">
+							<div class="certificado" data-periodo="manhã">
 								<div class="periodo">Certificado da manhã</div>
 								
 								<div class="descricao">
@@ -758,7 +762,7 @@
 								<div class="botao-cta" data-link="#" tabindex="0" role="button">Gerar »</div>
 							</div>
 
-							<div class="certificado">
+							<div class="certificado" data-periodo="tarde">
 								<div class="periodo">Certificado da tarde</div>
 								
 								<div class="descricao">
@@ -775,7 +779,7 @@
 						<h4 class="data"><span class="dia">21 a 23</span><span class="dia-semana">_certificado completo</span></h4>
 
 						<div class="lista-certificados">
-							<div class="certificado">
+							<div class="certificado integral">
 								<div class="botao-cta preto" data-link="#" tabindex="0" role="button">Gerar »</div>
 							</div>
 						</div>

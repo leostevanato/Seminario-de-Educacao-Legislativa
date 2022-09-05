@@ -5,6 +5,8 @@ script_tag_youtube.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(script_tag_youtube, firstScriptTag);
 
+var url_mdl_arquivos = 'https://www.educacaoadistancia.camara.leg.br/ead_cfd/pluginfile.php/' + codigo_pasta_arquivos + '/mod_folder/content/0/';
+
 var player1;
 
 // This function creates an <iframe> (and YouTube player) after the API code downloads.
@@ -59,8 +61,45 @@ function elementoClick(element) {
 	});
 }
 
+let seminario_promise = fetch(url_mdl_arquivos + 'seminario.json', {
+	headers: {
+		'Accept': 'application/json'
+	}
+});
+
+var regex_data = /([0-9]{2})[\-/ \.]([0-9]{2})/;
+
 document.addEventListener("DOMContentLoaded", () => {
 	substituirTextoInnerHtml(document.querySelector('#seminario-de-educacao-legislativa'), string_alvo, codigo_pasta_arquivos);
+
+	var elementoAcesseOEvento = document.querySelector('.item-conteudo[data-item="acesse-o-evento"]');
+	var elementoCertificado = document.querySelector('.item-conteudo[data-item="certificado"]');
+	
+	seminario_promise.then(response => {
+		return response.json();
+	}).then(seminarioJSON => {
+		seminarioJSON.eventos.forEach(evento => {
+			let evento_data = evento.data.match(regex_data);
+			
+			let elementoEventoPeriodo = elementoAcesseOEvento.querySelector('.eventos > .grupo-mes[data-mes="' + evento_data[2] + '"] > .grupo-data[data-dia="' + evento_data[1] + '"] > .periodos > .periodo[data-periodo="' + evento.periodo +'"]');
+			
+			elementoEventoPeriodo.querySelector(".botao-cta").dataset.link = urlPaginaConfirmaPresenca + evento.idPaginaConfirmaPresenca;
+
+			let elementoCertificadoPeriodo = elementoCertificado.querySelector('.certificados > .grupo-data[data-dia="' + evento_data[1] + '"] > .lista-certificados > .certificado[data-periodo="' + evento.periodo + '"]');
+			
+			elementoCertificadoPeriodo.querySelector(".botao-cta").dataset.link = urlPaginaCertificado + evento.idPaginaCertificado;
+		});
+
+		if (seminarioJSON.idPaginaCertificadoIntegral !== undefined) {
+			let elementoCertificadoIntegral = elementoCertificado.querySelector('.certificados > .grupo-data > .lista-certificados > .certificado.integral');
+		
+			if (elementoCertificadoIntegral !== null) {
+				elementoCertificadoIntegral.querySelector(".botao-cta").dataset.link = urlPaginaCertificado + seminarioJSON.idPaginaCertificadoIntegral;
+			}
+		}
+	}).catch(error => {
+		console.log("ERRO: " + error);
+	});
 });
 
 $(document).ready(() => {
