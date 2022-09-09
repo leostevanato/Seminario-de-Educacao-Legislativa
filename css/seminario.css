@@ -1071,6 +1071,18 @@ h3.sectionname,
   line-height: 13px;
   margin-top: 2px;
 }
+@media only screen and (min-width: 576px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=programacao] .programacao .grupo-mes .grupo-data .evento .texto .destaque-2 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=programacao] .programacao .grupo-mes .grupo-data .evento .texto .destaque-2 {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
 #seminario-de-educacao-legislativa #coluna-conteudo .item-conteudo[data-item=programacao] .botao-cta {
   display: block;
 }
