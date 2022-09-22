@@ -1,3 +1,14 @@
+const itens_menu = [
+	"Início",
+	"Sobre o evento",
+	"Boas-vindas",
+	"Acesse o evento",
+	"Programação",
+	"Rede do Legislativo",
+	"Certificado",
+	"Gravações"
+];
+
 var script_tag_youtube = document.createElement('script');
 script_tag_youtube.src = "https://www.youtube.com/iframe_api";
 
@@ -94,7 +105,15 @@ document.addEventListener("DOMContentLoaded", () => {
 			let elementoCertificadoIntegral = elementoCertificado.querySelector('.certificados > .grupo-data > .lista-certificados > .certificado.integral');
 		
 			if (elementoCertificadoIntegral !== null) {
-				elementoCertificadoIntegral.querySelector(".botao-cta").dataset.link = urlPaginaCertificado + seminarioJSON.idPaginaCertificadoIntegral;
+				elementoCertificadoIntegral.querySelector(".botao-cta.gerar").dataset.link = urlPaginaCertificado + seminarioJSON.idPaginaCertificadoIntegral;
+			}
+		}
+
+		if (seminarioJSON.idPaginaAvaliacao !== undefined) {
+			let elementoAvaliacao = elementoCertificado.querySelector('.certificados > .grupo-data > .lista-certificados > .certificado.integral');
+		
+			if (elementoAvaliacao !== null) {
+				elementoAvaliacao.querySelector(".botao-cta.avaliar").dataset.link = urlPaginaAvaliacao.replace("@ID@", seminarioJSON.idPaginaAvaliacao);
 			}
 		}
 	}).catch(error => {
@@ -103,17 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 $(document).ready(() => {
-	const itens_menu = [
-		"Início",
-		"Sobre o evento",
-		"Boas-vindas",
-		"Acesse o evento",
-		"Programação",
-		"Rede do Legislativo",
-		"Certificado",
-		"Gravações"
-	];
-
 	const slugify = str =>
 		str.toLowerCase()
 			.trim()

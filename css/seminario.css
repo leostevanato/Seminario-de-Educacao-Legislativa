@@ -55,6 +55,10 @@ h3.sectionname,
 }
 
 /* FIM - Layout moodle */
+.flex-basis-100 {
+  flex-basis: 100%;
+}
+
 #seminario-de-educacao-legislativa {
   font-family: "Helvetica";
   color: #222221;

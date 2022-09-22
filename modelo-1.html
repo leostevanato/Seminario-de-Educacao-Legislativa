@@ -25,6 +25,7 @@
 		var url_mdl_arquivos = "";
 		var urlPaginaConfirmaPresenca = "page/view.php?id=";
 		var urlPaginaCertificado = "simplecertificate/view.php?id=";
+		var urlPaginaAvaliacao = "feedback/complete.php?id=@ID@&courseid";
 		var urlVideoYouTube = "https://www.youtube.com/watch?v=";
 	</script>
 
@@ -815,8 +816,12 @@
 						<h4 class="data"><span class="dia">21 a 23</span><span class="dia-semana">_certificado completo</span></h4>
 
 						<div class="lista-certificados">
-							<div class="certificado integral">
-								<div class="botao-cta preto" data-link="#" tabindex="0" role="button">Gerar »</div>
+							<div class="certificado integral flex-row flex-wrap">
+								<div class="descricao flex-basis-100"><strong>Obs.:</strong> Para gerar o certificado completo, é preciso responder a uma breve avaliação.</div>
+
+								<div class="botao-cta preto avaliar" data-link="#" tabindex="0" role="button">Avaliar »</div>
+
+								<div class="botao-cta preto gerar" data-link="#" tabindex="0" role="button">Gerar »</div>
 							</div>
 						</div>
 					</div>

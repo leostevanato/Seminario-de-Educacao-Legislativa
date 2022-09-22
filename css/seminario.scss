@@ -130,6 +130,10 @@ h3.sectionname,
 
 /* FIM - Layout moodle */
 
+.flex-basis-100 { // Não tem no bootstrap, então criamos.
+	flex-basis: 100%;
+}
+
 #seminario-de-educacao-legislativa {
 	font-family: $familia-fonte;
 	color: $cinza-1;
